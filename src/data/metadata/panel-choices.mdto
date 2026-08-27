@@ -1,0 +1,882 @@
+- 1 :: ---- :: @ 168 HOURS
+- 2 :: ---- :: @ 144 HOURS
+- 3 :: ---- :: @ 120 HOURS
+- 4 :: ---- :: @ 96 HOURS
+- 5 :: ---- :: @ 72 HOURS
+- 6 :: ---- :: @ 48 HOURS
+- 7 :: ---- :: @ 24 HOURS
+- 8 :: WWW -> 2-W ::
+    - 1-W :: > New Game
+    - 2-W :: > How To Play
+    - 3-W :: > Credits
+- 9 :: WW -> 1-W ::
+    - 1-W :: > New Game
+    - 2-W :: > Credits
+- 10 :: WW -> 1-W ::
+    - 1-W :: > New Game
+    - 2-W :: > How To Play
+- 11 :: BR -> 1-B :: ; presumed
+    - 1-B :: > YES
+    - 2-R :: > NO
+- 12 :: RBYG -> <unknown> :: ; not obviously recorded
+    - 1-R :: - <garbled>
+    - 2-B :: - <garbled>
+    - 3-Y :: - <garbled>
+    - 4-G :: - <garbled>
+- 13 :: RBYG -> <unknown> :: ; not obviously recorded
+    - 1-R :: - <garbled>
+    - 2-B :: - <garbled>
+    - 3-Y :: - <garbled>
+    - 4-G :: - <garbled>
+- 14 :: ---- :: @ 24 HOURS
+- 15 :: RBYG -> 4-G ::
+    - 1-R :: - The blazing canyon
+    - 2-B :: - The lush swamplands
+    - 3-Y :: - The vast shallows
+    - 4-G :: - The high spire
+- 16 :: RBYG -> <unknown> :: ; not obviously recorded
+    - 1-R :: - The kind that controls its world
+    - 2-B :: - The kind that sleeps without fear
+    - 3-Y :: - The kind that keeps old secrets
+    - 4-G :: - The kind that touches the horizon
+- 17 :: N=W :: RBYG -> 4-G ::
+    - 1-R :: - He
+    - 2-B :: - She
+    - 3-Y :: - You
+    - 4-G :: - They
+- 18 :: N=WG :: RBYG -> 3-Y ::
+    - 1-R :: - Pocapoca
+    - 2-B :: - Tinomu
+    - 3-Y :: - Nomiani
+    - 4-G :: - Liford
+- 19 :: N=Y :: GY -> 1-G ::
+    - 1-G :: - Northeast, toward the spire
+    - 2-Y :: - Southwest, toward the river
+- 20 :: N=G :: BRY -> 2-R ::
+    - 1-B :: * Approach the strange figure
+    - 2-R :: * Pick up the discarded cloth
+    - 3-Y :: * Go back southwest again
+- 21 :: N=R :: BGY -> 1-B ::
+    - 1-B :: * Approach the strange figure
+    - 2-G :: * Keep pressing on
+    - 3-Y :: * Go back southwest again
+- 22 :: N=B :: BRY -> 1-B ::
+    - 1-B :: " Hey, are you okay?!
+    - 2-R :: " RIP weird bird guy.
+    - 3-Y :: " Uhhhh... oops?
+- 23 :: N=B :: RBGY -> 1-R ::
+    - 1-R :: " My name is Nomiani.
+    - 2-B :: " I'm a friend!
+    - 3-G :: " I'm a traveller.
+    - 4-Y :: " I'm... not really sure?
+- 24 :: N=R :: RBYG -> 3-Y ::
+    - 1-R :: " I'm fine, really!
+    - 2-B :: " I'm not fine, actually...
+    - 3-Y :: " What water jewelry?
+    - 4-G :: " What's wrong with my name?
+- 25 :: N=Y :: BGY -> 1-B ::
+    - 1-B :: " Yeah, let's find water now.
+    - 2-G :: " No, I want to go to the spire!
+    - 3-Y :: " But what is water jewelry?
+- 26 :: N=B :: BGR -> 1-B ::
+    - 1-B :: " That's where I woke up.
+    - 2-G :: " I don't know what that is.
+    - 3-R :: " Can you maybe drag a little faster?
+- 27 :: N=B :: RBY -> 3-Y ::
+    - 1-R :: * Try to stay awake
+    - 2-B :: * Just pass out already
+    - 3-Y :: * Try to remember something...
+- 28 :: N=Y :: YBG -> 2-B ::
+    - 1-Y :: " Phew... what happened?
+    - 2-B :: " Much better, thank you!
+    - 3-G :: " This water seems... salty?
+- 29 :: N=B :: RGB -> 1-R ::
+    - 1-R :: " I don't know, I just woke up there.
+    - 2-G :: " I'm trying to find someplace.
+    - 3-B :: " Wait, what happened to the old guy?
+- 30 :: N=R :: BRY -> 3-Y ::
+    - 1-B :: " The older bird said some formation wasn't normal?
+    - 2-R :: " Was there a storm recently?
+    - 3-Y :: " What moon thing?
+- 31 :: N=Y :: RBYG -> 1-R ::
+    - 1-R :: * Pick up the floating melon
+    - 2-B :: " What do you think it means?
+    - 3-Y :: " How did... it get there?
+    - 4-G :: " What's that got to do with me?
+- 32 :: N=R :: RBY -> 1-R ::
+    - 1-R :: " Yes, but... can I have that melon?
+    - 2-B :: " Who are you?
+    - 3-Y :: " Maaaaybe? Why?
+- 33 :: N=R :: BYG -> 3-G ::
+    - 1-B :: " Woah, four? That's impressive!
+    - 2-Y :: " Thanks! So... who are you?
+    - 3-G :: " Thanks! So... what do you know about the moon?
+- 34 :: N=G :: RBG -> 3-G ::
+    - 1-R :: " I have no clue what you're saying.
+    - 2-B :: " Who's 'foan'?
+    - 3-G :: " What do you mean, got the eye?
+- 35 :: N=G :: BY -> 1-B ::
+    - 1-B :: " Is... that good or bad luck?
+    - 2-Y :: " I'm so confused! Can I stop and ask something?
+- 36 :: N=B :: RBY -> 2-B ::
+    - 1-R :: " Good! I got the best luck! I guess!
+    - 2-B :: " I don't know most of these words. What's Mayli? Or Fress?
+    - 3-Y :: " 'Foa' just means 'lucky'? How's it different?
+- 37 :: ---- :: @ 144 HOURS
+- 38 :: N=B :: RBYG -> 1-R ::
+    - 1-R :: " Why not bother the Gofi?
+    - 2-B :: " Can I visit the Fress village?
+    - 3-Y :: " Which way is the ocean?
+    - 4-G :: " Can I visit the Nibo settlement?
+- 39 :: N=R :: BYG -> 1-B ::
+    - 1-B :: " Gifts like... this melon?
+    - 2-Y :: " What kind of things to trade?
+    - 3-G :: " Okay, so... maybe I should visit your homes instead?
+- 40 :: N=B :: RY -> 2-Y :: ; @->43
+    - 1-R :: " Where do I find something rare and shiny?
+    - 2-Y :: " Where do I find some Mayli rings?
+- 41 :: GY -> 2-Y :: ; >-@
+    - 1-G :: > Yes
+    - 2-Y :: > No
+- 42 :: ---- :: @ RECALIBRATION IN 2808 HOURS
+- 43 :: N=Y :: GB -> 2-B ::
+    - 1-G :: " Then I'll go down to the ocean to find them.
+    - 2-B :: " Okay... but, what happened to the older bird guy?
+- 44 :: N=B :: GY -> 1-G ::
+    - 1-G :: " Maybe... I should go find those Mayli rings in the meanwhile?
+    - 2-Y :: " Maybe... I should just wait here?
+- 45 :: N=G :: RBYG -> 4-G ::
+    - 1-R :: " I'll go quickly.
+    - 2-B :: " I'll go slowly.
+    - 3-Y :: " What difference does it make?
+    - 4-G :: " Sure... but what's a high-four?
+- 46 :: N=G :: RG -> 1-R ::
+    - 1-R :: " Okay. Will I find that stuff on the way?
+    - 2-G :: " Sure... I think I should hurry to get those rings, though.
+- 47 :: N=R :: RG -> 1-R ::
+    - 1-R :: " Then I'll go slowly to look for them. See you later!
+    - 2-G :: " I'll have to look later, gotta hurry right now. See you later!
+- 48 :: N=R :: RBYG -> 1-R ::
+    - 1-R :: * Take small flowers
+    - 2-B :: * Investigate thing in the river
+    - 3-Y :: * Go south, toward the ocean
+    - 4-G :: * Go northwest, toward the village
+- 49 :: N=R :: BYG -> 1-B ::
+    - 1-B :: * Investigate thing in the river
+    - 2-Y :: * Go south, toward the ocean
+    - 3-G :: * Go northwest, toward the village
+- 50 :: N=B :: YG -> 1-Y ::
+    - 1-Y :: * Keep pressing on to the ocean
+    - 2-G :: * Go back towards the village
+- 51 :: N=Y :: BYG -> 2-Y ::
+    - 1-B :: * Go north, towards the village
+    - 2-Y :: * Go southeast, towards the ocean
+    - 3-G :: * Go southwest, towards ???
+- 52 :: N=Y :: BYG -> 3-G ::
+    - 1-B :: * Go back towards the village
+    - 2-Y :: * Keep going towards the ocean
+    - 3-G :: * Try to remember something...
+- 53 :: N=G :: YG -> 1-Y ::
+    - 1-Y :: * Keep going towards the ocean
+    - 2-G :: * Go back towards the village
+- 54 :: N=Y :: BYG -> 1-B ::
+    - 1-B :: * Get a closer look
+    - 2-Y :: * Just keep going for the ocean
+    - 3-G :: * Go back the other way
+- 55 :: N=B :: RBYG -> 4-G ::
+    - 1-R :: " I can take 'em!
+    - 2-B :: * Oh, they seem friendly!
+    - 3-Y :: * Maybe they haven't noticed?
+    - 4-G :: * Run, run away!
+- 56 :: N=G :: RBG -> 3-G ::
+    - 1-R :: * Stop to pick up the hanging black material
+    - 2-B :: * Stop to pick up the antler on the stump
+    - 3-G :: * Keep going, keep going!!
+- 57 :: N=G :: RBG -> 1-R ::
+    - 1-R :: * Pick up the strange shiny object
+    - 2-B :: * Pick more sweet flowers
+    - 3-G :: * Just keep going!
+- 58 :: N=R :: BG -> 2-G ::
+    - 1-B :: * Pick more sweet flowers
+    - 2-G :: * Get back to running!!
+- 59 :: N=G :: BYG -> 2-Y ::
+    - 1-B :: * Pick up the seeds
+    - 2-Y :: * Pick up the oddly-shaped stone
+    - 3-G :: * Gotta lose them already!
+- 60 :: N=Y :: BYG -> 2-Y ::
+    - 1-B :: * Put seeds in stone container
+    - 2-Y :: * Jump into the river and float away
+    - 3-G :: * Keep running!!
+- 61 :: ---- :: @ 144 HOURS
+- 62 :: N=Y :: RB -> 2-B ::
+    - 1-R :: * Pick up some of the soft-looking grass
+    - 2-B :: * Approach the bright pink Mayli
+- 63 :: N=B :: RBYG -> 2-B ::
+    - 1-R :: " Well, who're YOU?
+    - 2-B :: " My name's Nomiani.
+    - 3-Y :: " Why's your voice so quiet?
+    - 4-G :: " Why are you upside-down?
+- 64 :: N=B :: RYG -> 3-G ::
+    - 1-R :: " But you look regular pink to me?
+    - 2-Y :: " Wait... what are those things on your tentacles?
+    - 3-G :: " I don't know, I just woke up on land.
+- 65 :: N=G :: RYB -> 3-B ::
+    - 1-R :: " What's dripor?
+    - 2-Y :: " I know weird things, but... no life memories.
+    - 3-B :: " A nibo and then a fress helped me.
+- 66 :: N=B :: RBYG -> 3-Y ::
+    - 1-R :: " Uhhh no, I'm good.
+    - 2-B :: " Yes, let's go!
+    - 3-Y :: " Can I grab some of this soft grass first?
+    - 4-G :: " What city?
+- 67 :: N=Y :: BYG -> 3-G ::
+    - 1-B :: " What are those things on your tentacles?
+    - 2-Y :: " Where is this city?
+    - 3-G :: * Try to remember something...
+- 68 :: N=G :: RYG -> 2-Y ::
+    - 1-R :: " It's nothing. Let's go!
+    - 2-Y :: " I don't know. They're just weird memory flashes.
+    - 3-G :: " I think I'm supposed to be somewhere.
+- 69 :: N=Y :: YG -> 2-G ::
+    - 1-Y :: " Someplace dark and blue, but not the ocean.
+    - 2-G :: " No, but I remember words being written.
+- 70 :: N=G :: RYG -> 2-Y ::
+    - 1-R :: " No, I'm not sure.
+    - 2-Y :: " I think so, yes?
+    - 3-G :: " Not Nibo words, maybe something else?
+- 71 :: N=Y :: RBY -> 1-R ::
+    - 1-R :: * Pick up unique sponge
+    - 2-B :: " Why, what's in the city?
+    - 3-Y :: * Just keep following along
+- 72 :: N=R :: RYG -> 2-Y ::
+    - 1-R :: " No, I'll do something else with it.
+    - 2-Y :: " Okay, what's dripor?
+    - 3-G :: " I'm just collecting anything interesting I see.
+- 73 :: N=Y :: RB -> 2-B ::
+    - 1-R :: " No, I think I'll keep it.
+    - 2-B :: * Give the Perfect Sponge to Darker Than Pink
+- 74 :: N=B :: RG -> 1-R ::
+    - 1-R :: * Pick up the spiky coral
+    - 2-G :: * Just keep pressing on
+- 75 :: N=R :: YG -> 1-Y ::
+    - 1-Y :: * Enter the city with Darker Than Pink
+    - 2-G :: * Go back to explore the ocean further
+- 76 :: N=Y :: RBYG -> 1-R ::
+    - 1-R :: * Approach the large red Mayli
+    - 2-B :: * Listen to the blue Mayli
+    - 3-Y :: * Listen to the yellow Mayli
+    - 4-G :: * Swim further into the city
+- 77 :: N=R :: BRY -> 1-B ::
+    - 1-B :: " I don't have any sweet seeds.
+    - 2-R :: * Try to give some items anyway
+    - 3-Y :: " How does this work? Can I get them back later?
+- 78 :: N=B :: BYG -> 1-B ::
+    - 1-B :: * Listen to the blue Mayli
+    - 2-Y :: * Listen to the yellow Mayli
+    - 3-G :: * Swim further into the city
+- 79 :: N=B :: YG -> 1-Y ::
+    - 1-Y :: * Listen to the yellow Mayli
+    - 2-G :: * Swim further into the city
+- 80 :: N=Y :: BYG -> 2-Y ::
+    - 1-B :: * Enter the open chamber
+    - 2-Y :: * Listen to one of the closed doors
+    - 3-G :: * Keep exploring further
+- 81 :: N=Y :: BG -> 1-B ::
+    - 1-B :: * Enter the open chamber
+    - 2-G :: * Keep exploring further
+- 82 :: N=B :: RBYG -> 2-B ::
+    - 1-R :: " Why don't you have a door?
+    - 2-B :: " I won't hurt you!
+    - 3-Y :: " Who're you?
+    - 4-G :: " Sorry! I'll just go...
+- 83 :: N=B :: RBYG -> 4-G ::
+    - 1-R :: " Just looking for neat things to pick up.
+    - 2-B :: " Just trying to meet people!
+    - 3-Y :: " I'm trying to figure that out myself.
+    - 4-G :: " I'm new here, I'm just exploring.
+- 84 :: N=G :: RBYG -> 4-G ::
+    - 1-R :: " What are those things you've collected?
+    - 2-B :: " What happened to your tentacles?
+    - 3-Y :: " Okay, I don't want trouble either.
+    - 4-G :: " What's that on your wall?
+- 85 :: N=G :: RB -> 2-B ::
+    - 1-R :: " Hmm, okay. What are those things you collected?
+    - 2-B :: " May I read your poem?
+- 86 :: N=B :: RBYG -> 2-B ::
+    - 1-R :: - Feeling powerless
+    - 2-B :: - Being abandoned
+    - 3-Y :: - Losing something important
+    - 4-G :: - Staying inside
+- 87 :: N=B :: RBYG -> 4-G ::
+    - 1-R :: " Why do you feel abandoned?
+    - 2-B :: " You're a good poet, though!
+    - 3-Y :: " Sorry I barged in again.
+    - 4-G :: " What do you feel it's about?
+- 88 :: N=G :: RBYG -> 2-B ::
+    - 1-R :: " So, it was more of a story?
+    - 2-B :: " I'm sorry you went through that.
+    - 3-Y :: " What IS a pink storm?
+    - 4-G :: " Easier to draw it than speak?
+- 89 :: N=B :: RBYG -> 3-Y ::
+    - 1-R :: " A certain object, I think.
+    - 2-B :: " Someone who can help me.
+    - 3-Y :: " I'm not really sure.
+    - 4-G :: " I'm supposed to be someplace.
+- 90 :: N=Y :: YG -> 2-G ::
+    - 1-Y :: " Wait... what do those words mean? 'Cho'?
+    - 2-G :: " Okay, I'll go and talk to Stoneshell.
+- 91 :: N=G :: YG -> 2-G ::
+    - 1-Y :: * Go back towards the entrance
+    - 2-G :: * Go further into the city
+- 92 :: N=G :: RBYG -> 2-B ::
+    - 1-R :: " Who are you?
+    - 2-B :: " My name's Nomiani.
+    - 3-Y :: " I'm looking for the library.
+    - 4-G :: " I'm just exploring.
+- 93 :: N=B :: RBY -> 1-R ::
+    - 1-R :: " I was supposed to meet Darker Than Pink here.
+    - 2-B :: " I actually wanted your help.
+    - 3-Y :: " Is there writing? I can read!
+- 94 :: N=R :: RBY -> 1-R ::
+    - 1-R :: " Hi! I just got here.
+    - 2-B :: " Did you make the... dripor?
+    - 3-Y :: " Hi! What should I look at here?
+- 95 :: N=R :: RBYG -> 4-G ::
+    - 1-R :: " I'll check out an item.
+    - 2-B :: " I'll try and read.
+    - 3-Y :: " I want a lecture.
+    - 4-G :: " Can I just... see the library first?
+- 96 :: N=G :: RYG -> 1-R ::
+    - 1-R :: " How do you categorize things?
+    - 2-Y :: " How do you preserve things?
+    - 3-G :: " Can I try to identify something?
+- 97 :: N=R :: RBY -> 3-Y ::
+    - 1-R :: - Check out something small
+    - 2-B :: - Check out something numerous
+    - 3-Y :: - Check out something complex
+- 98 :: N=Y :: YG -> 2-G ::
+    - 1-Y :: " This used to be a door for a submarine.
+    - 2-G :: " This writing says TURN RIGHT TO LOCK.
+- 99 :: N=G :: RBY -> 1-R ::
+    - 1-R :: " I've seen this kind of writing before.
+    - 2-B :: " I just sort of know?
+    - 3-Y :: " I don't know how I know them.
+- 100 :: N=R :: RBY -> 2-B ::
+    - 1-R :: " Hey uh, personal space, please!
+    - 2-B :: " They're on... some sort of blue screen?
+    - 3-Y :: " No, I just know it.
+- 101 :: N=B :: RB -> 2-B ::
+    - 1-R :: * Screw that, that's their business only!
+    - 2-B :: * Describe everything that's happened so far.
+- 102 :: N=B :: RB -> 2-B ::
+    - 1-R :: " Wait, what?! I don't need to be monitored!
+    - 2-B :: " Uhhh yeah, Darker Than Pink can watch me!
+- 103 :: N=B :: RBY -> 1-R ::
+    - 1-R :: " Wait, what about the dripor?
+    - 2-B :: " What things for you?
+    - 3-Y :: " What'd I say wrong?
+- 104 :: N=R :: BRG -> 1-B ::
+    - 1-B :: " Wow, thank you!
+    - 2-R :: " So, what things did you want?
+    - 3-G :: " Maybe I should get going?
+- 105 :: N=B :: RBY -> 3-Y ::
+    - 1-R :: " Don't really want to do any.
+    - 2-B :: " Sure I can!
+    - 3-Y :: " Before I say yes, what are they?
+- 106 :: N=Y :: RGBY -> 3-B ::
+    - 1-R :: " I can only get you the objects.
+    - 2-G :: " You can just come with me.
+    - 3-B :: " I can do both!
+    - 4-Y :: " Why those things?
+- 107 :: N=B :: RBG -> 1-R ::
+    - 1-R :: * Travel slowly to collect things
+    - 2-B :: * Travel quickly back to where they met the Fress
+    - 3-G :: * Travel quickly back to where they met Urlestio
+- 108 :: N=R :: RBYG -> 4-G ::
+    - 1-R :: * Go southwest
+    - 2-B :: * Go west
+    - 3-Y :: * Go northwest
+    - 4-G :: * Travel quickly back to where they met the Fress
+- 109 :: N=G :: BG -> 1-B ::
+    - 1-B :: * Head towards the Fress village
+    - 2-G :: * Head toward the Nibo village
+- 110 :: N=B :: RBG -> 1-R ::
+    - 1-R :: * Pick up sweet seeds to put in the stone container
+    - 2-B :: * Pick up some crop shrimp
+    - 3-G :: * Keep heading west
+- 111 :: N=R :: YG -> 1-Y ::
+    - 1-Y :: * Pick up some crop shrimp
+    - 2-G :: * Keep heading west
+- 112 :: N=Y :: BYG -> 1-B ::
+    - 1-B :: * Enter the village square
+    - 2-Y :: * Exit north towards the swamps
+    - 3-G :: * Go back the other way
+- 113 :: ---- :: @ 336 HOURS
+- 114 :: N=B :: RBY -> 3-Y ::
+    - 1-R :: * Talk to the shopkeeper
+    - 2-B :: * Approach the gray older Fress
+    - 3-Y :: * Approach the Fress they recognize
+- 115 :: N=Y :: BYG -> 2-Y ::
+    - 1-B :: " Not the things you asked for, sorry.
+    - 2-Y :: " Yes, but it sort of got me in trouble.
+    - 3-G :: " I'm still looking around, actually.
+- 116 :: N=Y :: YG -> 1-Y ::
+    - 1-Y :: " No, I think I just made an elder Mayli mad.
+    - 2-G :: " Not sure... now I've got even more questions about what I know.
+- 117 :: N=Y :: BG -> 1-B ::
+    - 1-B :: " Sorry! My name is Nomiani.
+    - 2-G :: " Oh, you're Sowgil? I never did learn your name.
+- 118 :: ---- :: @ 336 HOURS
+- 119 :: N=B :: BG -> 2-G ::
+    - 1-B :: " ...Third? Are there two more Sowgils?
+    - 2-G :: " I think we were going to talk about the moon, yeah...
+- 120 :: N=G :: RY -> 1-R ::
+    - 1-R :: " No, I'm still looking for them.
+    - 2-Y :: " No, but I do really need
+- 121 :: N=R :: RY -> 2-Y ::
+    - 1-R :: " Okay, I'll look around some more then.
+    - 2-Y :: " What is it?
+- 122 :: N=Y :: BYG -> 3-G ::
+    - 1-B :: " Don't worry, I'm sure Sowgil will be good!
+    - 2-Y :: " I don't really understand.
+    - 3-G :: " Sorry, I'm just trying to figure things out myself.
+- 123 :: N=G :: YG -> 2-G ::
+    - 1-Y :: " I don't really want to be confused more...
+    - 2-G :: " I'll help if it'll get me answers.
+- 124 :: N=G :: RBG -> 2-B ::
+    - 1-R :: * Talk to the shopkeeper
+    - 2-B :: * Talk to the older gray Fress
+    - 3-G :: * Poke around the village more
+- 125 :: N=B :: RBY -> 3-Y ::
+    - 1-R :: " I'm looking for more items.
+    - 2-B :: " I'd just like to talk to you.
+    - 3-Y :: " I'm looking for answers.
+- 126 :: N=Y :: RBYG -> 1-R ::
+    - 1-R :: " Tell me about your gods.
+    - 2-B :: " Tell me about the village.
+    - 3-Y :: " Tell me some traditions.
+    - 4-G :: " I need different answers.
+- 127 :: N=R :: RYG -> 1-R ::
+    - 1-R :: " Tell me about some other gods.
+    - 2-Y :: " How do you know this story?
+    - 3-G :: " Tell me some other things about your culture.
+- 128 :: N=R :: RBY -> 2-B ::
+    - 1-R :: " Tell me about some other gods.
+    - 2-B :: " Can I ask the Speaking Dark for good luck?
+    - 3-Y :: " Tell me some other things about your culture.
+- 129 :: N=B :: BY -> 1-B ::
+    - 1-B :: * Ask the Speaking Dark to give good luck
+    - 2-Y :: " Maybe later, I'd rather learn more right now.
+- 130 :: N=B :: BYG -> 1-B ::
+    - 1-B :: " I saw... various people? Some I know?
+    - 2-Y :: " I saw a vision, but I don't know what it means.
+    - 3-G :: " I'm supposed to be somewhere.
+- 131 :: N=B :: GYR -> 1-G ::
+    - 1-G :: " How should I pursue it?
+    - 2-Y :: " I'm not even sure where this path leads.
+    - 3-R :: " What if some of the relationships are bad?
+- 132 :: ---- :: @ 168 HOURS
+- 133 :: N=G :: YG -> 2-G :: ; color mismatch (yellow on 134)
+    - 1-Y :: " I guess I meant more where to start.
+    - 2-G :: " I better start looking, then!
+- 134 :: N=Y :: RG -> 1-R :: ; color mismatch (2-G on 133)
+    - 1-R :: * Talk to the shopkeeper
+    - 2-G :: * Investigate the village more
+- 135 :: N=R :: RBGY -> 2-B ::
+    - 1-R :: * Store coral, flowers, and crop shrimp
+    - 2-B :: * Store melon, flowers, and spare plasticite
+    - 3-G :: * Store grass, coral, and crop shrimp
+    - 4-Y :: * Don't store anything
+- 136 :: N=B :: RBG -> 1-R ::
+    - 1-R :: * Talk to the tall red-furred Fress
+    - 2-B :: * Investigate further into the village
+    - 3-G :: * Travel north to the swamps
+- 137 :: N=R :: RBG -> 2-B ::
+    - 1-R :: " Hello... what's that you have there?
+    - 2-B :: " My name's Nomiani. What's yours?
+    - 3-G :: " Hello. What're you up to?
+- 138 :: N=B :: BG -> 2-G ::
+    - 1-B :: " No, I just want to talk a bit.
+    - 2-G :: " I'm actually looking for some things. Can you help?
+- 139 :: N=G :: BY -> 1-B ::
+    - 1-B :: " Some beetle powder, and a certain flower.
+    - 2-Y :: " I'm actually looking for some things. Can you help?
+- 140 :: N=B :: RB -> 1-R ::
+    - 1-R :: " Would you be willing to trade something for the flower?
+    - 2-B :: " Where would I talk to Juka-First?
+- 141 :: ---- :: @ 504 HOURS
+- 142 :: N=R :: RGB -> 1-R ::
+    - 1-R :: " Where would I find this stone?
+    - 2-G :: " A dream? Why do you want that stone?
+    - 3-B :: " Okay. Also, where would I talk to Juka-First?
+- 143 :: N=R :: RGB -> 3-B ::
+    - 1-R :: " Why not go find it yourself?
+    - 2-G :: " Okay, I'll go and look for it.
+    - 3-B :: " Okay. Also, where would I talk to Juka-First?
+- 144 :: N=B :: BYG -> 1-B ::
+    - 1-B :: * Head toward the back of the village
+    - 2-Y :: * Travel quickly back to the coast
+    - 3-G :: * Head north, towards the swamps
+- 145 :: N=B :: BG -> 1-B ::
+    - 1-B :: " Hello? Anyone in here?
+    - 2-G :: * Just walk inside
+- 146 :: N=B :: BYG -> 1-B ::
+    - 1-B :: " Are you Juka-First?
+    - 2-Y :: " I was just looking at these beetles...
+    - 3-G :: " I'm just exploring around...
+- 147 :: N=B :: BY -> 2-Y ::
+    - 1-B :: " Frettin-Second told me to talk to you.
+    - 2-Y :: " I'm Nomiani. I wanted to ask about these beetles.
+- 148 :: N=Y :: RBY -> 2-B ::
+    - 1-R :: " Can I have one?
+    - 2-B :: " What's your favorite?
+    - 3-Y :: " Do you have any, uh, powder from them?
+- 149 :: N=B :: BRY -> 3-Y ::
+    - 1-B :: " I guess they're all your favorite!
+    - 2-R :: " What about a least favorite?
+    - 3-Y :: " Do any of them make powder?
+- 150 :: N=Y :: RY -> 1-R ::
+    - 1-R :: " I really need some for... reasons?
+    - 2-Y :: " I was just curious.
+- 151 :: N=R :: YG -> 1-Y ::
+    - 1-Y :: " Yes, I was trying to find some for Sowgil.
+    - 2-G :: " No, I was looking for myself.
+- 152 :: N=Y :: BYG -> 1-B ::
+    - 1-B :: * Approach Sowgil-Third again
+    - 2-Y :: * Travel quickly back to the coast
+    - 3-G :: * Head north toward the swamps
+- 153 :: N=B :: RBG -> 1-R ::
+    - 1-R :: " Juka-First won't give away any beetles.
+    - 2-B :: " I spoke to Pliyo-Fourth.
+    - 3-G :: " I think I may have found the flower?
+- 154 :: N=R :: RYG -> 3-G ::
+    - 1-R :: " I'll look for one myself.
+    - 2-Y :: " I'll try again when they're out.
+    - 3-G :: " ...What's the ruzzler?
+- 155 :: N=G :: RYG -> 3-G ::
+    - 1-R :: " Okay, I'll try that.
+    - 2-Y :: " That still doesn't explain what it is.
+    - 3-G :: " What's so bad about feeding it?
+- 156 :: ---- :: @ 168 HOURS
+- 157 :: N=G :: RBG -> 2-B ::
+    - 1-R :: " Why's no one tried to stop them, then?
+    - 2-B :: " But you don't seem worried?
+    - 3-G :: " I'll go talk to them.
+- 158 :: N=B :: RBY -> 2-B ::
+    - 1-R :: " Talking to Juka might do something, though?
+    - 2-B :: " ...You can predict the future?
+    - 3-Y :: " I guess that makes sense.
+- 159 :: N=B :: YG -> 2-G ::
+    - 1-Y :: " You sure that wasn't just a lucky guess?
+    - 2-G :: " Can you predict my future?
+- 160 :: N=G :: RB -> 2-B ::
+    - 1-R :: " Wait, why can't you predict it?
+    - 2-B :: " You like talking to me?
+- 161 :: ---- :: @ 336 HOURS
+- 162 :: N=B :: BRYG -> 1-B ::
+    - 1-B :: " I feel like some strange collective force is guiding all my decisions.
+    - 2-R :: * Do something mystical
+    - 3-Y :: * Stand there, confused
+    - 4-G :: * Cartwheel away
+- 163 :: N=B :: BYG -> 2-Y ::
+    - 1-B :: * Follow the current towards Juka-First
+    - 2-Y :: * Follow the current towards the shoreline
+    - 3-G :: * Follow the current towards the Nibo
+- 164 :: N=Y :: RYG -> 2-Y ::
+    - 1-R :: * Keep going into the ocean
+    - 2-Y :: * Take a rest
+    - 3-G :: * Double back to explore
+- 165 :: N=Y :: YBR -> 1-Y ::
+    - 1-Y :: " No, just sleeping.
+    - 2-B :: " Hello, who are you?
+    - 3-R :: " I was kind of in the middle of an important dream...
+- 166 :: N=Y :: RYG -> 3-G ::
+    - 1-R :: " Just felt like doing it here.
+    - 2-Y :: " I'm avoid the city for now.
+    - 3-G :: " I'm not sure, really.
+- 167 :: N=G :: RBY -> 3-Y ::
+    - 1-R :: " Wait, who're you?
+    - 2-B :: " My name's Nomiani.
+    - 3-Y :: " I don't think I've eaten recently...
+- 168 :: N=Y :: GY -> 1-G ::
+    - 1-G :: " Sure, sounds good!
+    - 2-Y :: " No thanks, I'm busy.
+- 169 :: N=G :: RBYG -> 2-B ::
+    - 1-R :: " Let's go south for fish.
+    - 2-B :: " Let's go north for mussels.
+    - 3-Y :: " I'm actually not sure what I like.
+    - 4-G :: " I think I like brine melons.
+- 170 :: ---- :: @ 168 HOURS
+- 171 :: N=B :: RBG -> 3-G ::
+    - 1-R :: * Try some mussels
+    - 2-B :: " You can go first.
+    - 3-G :: " What's that sparkling thing?
+- 172 :: N=G :: RY -> 1-R ::
+    - 1-R :: " Can you grab it, please?
+    - 2-Y :: " Cool! Now, about those mussels...
+- 173 :: N=R :: RBY -> 3-Y ::
+    - 1-R :: " It's shiny! Isn't that enough?
+    - 2-B :: " I need to give it to a Fress.
+    - 3-Y :: " I'm collecting certain things.
+- 174 :: N=Y :: RBYG -> 3-Y ::
+    - 1-R :: " That's my secret.
+    - 2-B :: " Things to help out some people.
+    - 3-Y :: " Just anything, really.
+    - 4-G :: " Things for a quest.
+- 175 :: N=Y :: RBYG -> 3-Y ::
+    - 1-R :: " Some beetle powder.
+    - 2-B :: " An extra large oilskin
+    - 3-Y :: " Some weavewire.
+    - 4-G :: " I'm supposed to be somewhere.
+- 176 :: N=Y :: RYG -> 2-Y ::
+    - 1-R :: * Try a mussel
+    - 2-Y :: " Weird machines?
+    - 3-G :: " Guess I should go find them, then.
+- 177 :: N=Y :: RBYG -> 3-Y ::
+    - 1-R :: * Try a mussel
+    - 2-B :: " I guess to see at night?
+    - 3-Y :: " You mean... electricity?
+    - 4-G :: " Huh, I should go find out.
+- 178 :: N=Y :: BYG -> 1-B,3-G :: ; tie
+    - 1-B :: " Because electricity can create light?
+    - 2-Y :: " It just sounds familiar.
+    - 3-G :: " What's a flazzat?
+- 179 :: N=BG :: RB -> 1-R ::
+    - 1-R :: " What do you mean, what's up with my markings?
+    - 2-B :: " I'm doing my best, there's a lot I don't understand!
+- 180 :: N=R :: RYG -> 3-G ::
+    - 1-R :: " I don't think I have any control over that.
+    - 2-Y :: " What's colorwave language?
+    - 3-G :: " Huh? What have I been saying?
+- 181 :: N=G :: RBY -> 1-R ::
+    - 1-R :: " Might be... what I want?
+    - 2-B :: " It doesn't make sense to me, either.
+    - 3-Y :: " But I'm not controlling that...
+- 182 :: N=R :: RBG -> 3-G ::
+    - 1-R :: " No, there's only one thing I want.
+    - 2-B :: " Not really? But... maybe yes?
+    - 3-G :: " Guess I want a lot of different things.
+- 183 :: N=G :: RBYG -> 2-B ::
+    - 1-R :: " Now... I should try a mussel.
+    - 2-B :: " Now... I'd like to know your name.
+    - 3-Y :: " Now... I should give away this stone.
+    - 4-G :: " Now... I should find the Nibo settlement.
+- 184 :: ---- :: @ 168 HOURS
+- 185 :: N=B :: BR -> 1-B ::
+    - 1-B :: " My name's Nomiani.
+    - 2-R :: " What kind of name is 'Joy's History'?
+- 186 :: N=B :: BYG -> 2-Y ::
+    - 1-B :: " I didn't pick it myself, something else did.
+    - 2-Y :: " Dunno. Just seemed right, I guess?
+    - 3-G :: " Is there something wrong with it?
+- 187 :: N=Y :: RYG -> 1-R ::
+    - 1-R :: " Wait... I should eat something.
+    - 2-Y :: " Actually, I have other places to be.
+    - 3-G :: "  Yeah, let's go!
+- 188 :: N=R :: RB -> 2-B ::
+    - 1-R :: " I'm fine, I got it!
+    - 2-B :: " No, I actually haven't...
+- 189 :: N=B :: RBG -> 2-B ::
+    - 1-R :: " Just never got around to it?
+    - 2-B :: " I'm new to a lot of things.
+    - 3-G :: " I don't think I've eaten anything before...
+- 190 :: N=B :: RYG -> 2-Y ::
+    - 1-R :: " Not knowing MOST things isn't new...
+    - 2-Y :: " I understand some weird writing?
+    - 3-G :: " I know I'm supposed to be somewhere.
+- 191 :: ---- :: @ 168 HOURS
+- 192 :: N=Y :: YG -> 1-Y ::
+    - 1-Y :: " No, it's other writing. Some in the library.
+    - 2-G :: " No, but I do want to try and learn Nibo writing.
+- 193 :: N=Y :: BYG -> 3-G ::
+    - 1-B :: " Okay, let's go!
+    - 2-Y :: " Actually... I think I should avoid the city right now.
+    - 3-G :: " It just said 'turn right to lock'.
+- 194 :: N=G :: BYG -> 3-G ::
+    - 1-B :: " I think it's what you said.
+    - 2-Y :: " I don't know.
+    - 3-G :: " I think it was part of a door.
+- 195 :: N=G :: RYG -> 1-R ::
+    - 1-R :: " I think it went to something that's gone now.
+    - 2-Y :: " I don't really know where it goes.
+    - 3-G :: " I think... I need to find a different mystery door.
+- 196 :: N=R :: YBG -> 2-B ::
+    - 1-Y :: " You shouldn't skip lessons!
+    - 2-B :: " Well, I'm going to return this stone to the Fress...
+    - 3-G :: " Well, I'm going to try and find the Nibo settlement...
+- 197 :: N=B :: BR -> 1-B ::
+    - 1-B :: " Sure!
+    - 2-R :: " No, I should do this myself.
+- 198 :: N=B :: YG -> 1-Y ::
+    - 1-Y :: * Go slowly and look for items
+    - 2-G :: * Travel quickly to the Fress village
+- 199 :: N=Y :: BYG -> 1-B ::
+    - 1-B :: * Travel west towards the Fress village
+    - 2-Y :: * Travel south, back into the water
+    - 3-G :: * Think about this spot more
+- 200 :: N=B :: BYG -> 1-B ::
+    - 1-B :: * Keep going west toward the Fress village
+    - 2-Y :: * Go back the way you came
+    - 3-G :: * Pick up the pace
+- 201 :: N=B :: RBG -> 3-G ::
+    - 1-R :: * Pick up sweet seeds before continuing west
+    - 2-B :: * Keep heading west to the village
+    - 3-G :: * Stop to watch the thing in the river
+- 202 :: N=G :: RYG -> 3-G ::
+    - 1-R :: " I did see one with some sort of harness...
+    - 2-Y :: " It looks like a dolphin.
+    - 3-G :: " We could follow it and see?
+- 203 :: N=G :: RG -> 2-G ::
+    - 1-R :: * Keep following the path for items
+    - 2-G :: * Jump into the river
+- 204 :: N=G :: YG -> 2-G ::
+    - 1-Y :: * Stop and surface to see where they are
+    - 2-G :: * Keep following the Riverline
+- 205 :: N=G :: BG -> 1-B ::
+    - 1-B :: * Stop and talk to Juka-First
+    - 2-G :: * Continue on into the village
+- 206 :: N=B :: BYG -> 2-Y ::
+    - 1-B :: " This friend is Joy's History!
+    - 2-Y :: " Sorry, we didn't mean to scare anyone.
+    - 3-G :: " We wanted to see if this Riverline was trained.
+- 207 :: N=Y :: RBY -> 3-Y ::
+    - 1-R :: " I wanted to talk about those beetles again.
+    - 2-B :: " I came to trade something with Frettin-Second.
+    - 3-Y :: " We were just hunting for shiny things.
+- 208 :: N=Y :: RGB -> 1-R ::
+    - 1-R :: " What's dangerous about the Gofi?
+    - 2-G :: " What plasticine pit?
+    - 3-B :: " I was here to trade something anyway.
+- 209 :: N=R :: RG -> 2-G ::
+    - 1-R :: " I think I should still try and find them at some point...
+    - 2-G :: " Noted. But also... what's a plasticine pit?
+- 210 :: N=G :: RBYG -> 1-R ::
+    - 1-R :: " The black everstone?
+    - 2-B :: " What kind of rocks and bones?
+    - 3-Y :: " Eh, sounds boring.
+    - 4-G :: " Sounds interesting! How do I get there?
+- 211 :: N=R :: RBYG -> 2-B ::
+    - 1-R :: " I'm afraid of it.
+    - 2-B :: " I need to see it.
+    - 3-Y :: " I understand it.
+    - 4-G :: " I don't understand it.
+- 212 :: ---- :: @ 336 HOURS
+- 213 :: N=B :: RBG -> 1-R ::
+    - 1-R :: " Yes, it's very important.
+    - 2-B :: " I should stop in the village first anyway.
+    - 3-G :: " Don't you want to explore those swamps?
+- 214 :: N=R :: GY -> 1-G ::
+    - 1-G :: " That's okay. Let's get going!
+    - 2-Y :: " On second thought, let's go into the village instead.
+- 215 :: N=G :: BYG -> 3-G ::
+    - 1-B :: * Head west back to the village
+    - 2-Y :: * Head east toward the shore
+    - 3-G :: * Head south to the swamps
+- 216 :: N=G :: BG -> 1-B ::
+    - 1-B :: * Yell hello to Frettin-Second
+    - 2-G :: * Ignore them and keep going to the swamps
+- 217 :: N=B :: BY -> 1-B ::
+    - 1-B :: " Sorry! But... I found your dream stone!
+    - 2-Y :: " Sorry! What're you doing out here?
+- 218 :: N=B :: RB -> 2-B ::
+    - 1-R :: " On second thought... I should keep this.
+    - 2-B :: * Exchange the stone for the flower
+- 219 :: N=B :: BG -> 1-B ::
+    - 1-B :: " No problem! What do you want it for, anyway?
+    - 2-G :: " You're welcome... I better get going, though!
+- 220 :: N=B :: RYG -> 2-Y ::
+    - 1-R :: " What about Juka-First?
+    - 2-Y :: " Do you HAVE to court someone?
+    - 3-G :: " Do Fress normally give each other stones?
+- 221 :: N=Y :: RBY -> 1-R ::
+    - 1-R :: " 'Should' doesn't mean 'have to'.
+    - 2-B :: " Forget luck, what about love?
+    - 3-Y :: " Maybe don't worry about it right now.
+- 222 :: N=R :: YG -> 2-G ::
+    - 1-Y :: * Try to follow Frettin-Second
+    - 2-G :: * Head on to the swamps
+- 223 :: N=G :: RYG -> 3-G ::
+    - 1-R :: * Try to scare the thing away
+    - 2-Y :: * Go back the other way
+    - 3-G :: * Try to quietly cross the water
+- 224 :: N=G :: YG -> 1-Y ::
+    - 1-Y :: * Stop to look a little closer
+    - 2-G :: * Keep moving on
+- 225 :: N=Y :: YG -> 1-Y ::
+    - 1-Y :: * Try and think about what's familiar here
+    - 2-G :: * Keep heading to the plasticine pit
+- 226 :: N=Y :: YG -> 2-G ::
+    - 1-Y :: " Sorry, I can't explain it.
+    - 2-G :: " I think I need to keep going.
+- 227 :: N=G :: RBG -> 2-B ::
+    - 1-R :: * Pick up scattered bones
+    - 2-B :: * Pick up stray bird creature
+    - 3-G :: * Keep heading toward the pit
+- 228 :: N=B :: RBG -> 2-B ::
+    - 1-R :: * Pick up scattered bones
+    - 2-B :: * Return the stray chup to the nest
+    - 3-G :: * Keep heading toward the pit
+- 229 :: N=B :: BYRG -> 1-B ::
+    - 1-B :: " No? It needed to go home!
+    - 2-Y :: " What, are they tasty?
+    - 3-R :: * Pick up scattered bones
+    - 4-G :: * Keep heading toward the pit
+- 230 :: N=B :: BYRG -> 1-B ::
+    - 1-B :: " I'd rather help than hurt things.
+    - 2-Y :: " Should I take one just in case?
+    - 3-R :: * Pick up scattered bones
+    - 4-G :: * Keep pressing on
+- 231 :: N=B :: RG -> 1-R ::
+    - 1-R :: * Pick up scattered bones
+    - 2-G :: * Keep heading toward the pit
+- 232 :: N=R :: RG -> 2-G ::
+    - 1-R :: * Go and grab a chup for the road
+    - 2-G :: * Keep heading toward the pit
+- 233 :: N=G :: BY -> 1-B ::
+    - 1-B :: " Okay. Thank you for coming this far.
+    - 2-Y :: " I've changed my mind. I'm going back, too.
+- 234 :: N=B :: RBYG -> 2-B ::
+    - 1-R :: * Pick up sparkling power
+    - 2-B :: * Examine the strata
+    - 3-Y :: * Go south
+    - 4-G :: * Go west
+- 235 :: N=B :: RYG -> 1-R ::
+    - 1-R :: * Pick up sparkling powder
+    - 2-Y :: * Go south
+    - 3-G :: * Go west
+- 236 :: N=R :: YG -> 1-Y ::
+    - 1-Y :: * Go south
+    - 2-G :: * Go west
+- 237 :: N=Y :: RYG -> 1-R ::
+    - 1-R :: * Pick up metal slats
+    - 2-Y :: * Go northwest, higher up
+    - 3-G :: * Go southwest, further down
+- 238 :: N=R :: RYG -> 2-Y ::
+    - 1-R :: * Drop a random item
+    - 2-Y :: * Go northwest, higher up
+    - 3-G :: * Go southwest, further down
+- 239 :: N=Y :: RYG -> 1-R ::
+    - 1-R :: * Put the sparkling powder in the metal container
+    - 2-Y :: * Gentle slope to the south
+    - 3-G :: * Steep slope to the west
+- 240 :: N=R :: YG -> 1-Y ::
+    - 1-Y :: * Take the gentle slope to the south
+    - 2-G :: * Take the steep slope to the west
+- 241 :: N=Y :: RBY -> 2-B ::
+    - 1-R :: * Try and muscle through them
+    - 2-B :: * Toss out the crop shrimp to them
+    - 3-Y :: * Go back and try the other slope
+- 242 :: N=B :: GR -> 1-G ::
+    - 1-G :: * Quick, go now!!
+    - 2-R :: * Stop to pick up the shiny object
+- 243 :: N=G :: BGY -> 2-G ::
+    - 1-B :: * Examine the edges of the stone
+    - 2-G :: * Examine the writing on the front
+    - 3-Y :: * Stop and take a rest
+- 244 :: N=G :: BY -> 2-Y ::
+    - 1-B :: * Examine the edges of the stone
+    - 2-Y :: * Stop to rest and clear their head
+- 245 :: N=Y :: BYG -> <tbd> ::
+    - 1-B :: * Examine the edges of the stone
+    - 2-Y :: * Keep trying to think through this
+    - 3-G :: * Leave the area

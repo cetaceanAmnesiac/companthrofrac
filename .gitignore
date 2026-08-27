@@ -1,0 +1,17 @@
+node_modules
+.output
+.wxt/
+# web-ext.config.ts
+
+stats.html
+stats-*.json
+
+.chromium/**
+!.chromium/*/
+!.chromium/*/.gitkeep
+
+# hidden
+@@*
+src/data/hiatus/
+src/data/panel-anims
+src/data/panel-keyframes

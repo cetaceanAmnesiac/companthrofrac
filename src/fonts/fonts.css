@@ -1,0 +1,25 @@
+/*
+ * Font "OneSize" by Yuji Saiki
+ * https://www.dafont.com/yuji-saiki.d591
+ *
+ * use local installation if available (`local()`)
+ */
+
+@font-face {
+  font-family: 'OneSize';
+
+  src: local('Onesize'), url('@/fonts/onesize.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OneSize Reverse';
+  src: local('Onesize Reverse'),
+    url('@/fonts/onesize-reverse.ttf') format('truetype');
+}
+
+/* Font stack definitions */
+:root {
+  --font-onesize: 'OneSize', 'Courier New', Courier, monospace;
+  --font-onesize-reverse: 'OneSize Reverse', 'Courier New', Courier, monospace;
+  --font-monospace: 'Courier New', Courier, monospace;
+}

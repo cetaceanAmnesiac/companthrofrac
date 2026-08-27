@@ -1,0 +1,4 @@
+/* @reference target only — not a runtime stylesheet.
+   Svelte <style> blocks use `@reference "../../assets/tailwind.css"` to
+   resolve @apply directives. All runtime CSS goes through sidepanel.css. */
+@import 'tailwindcss';

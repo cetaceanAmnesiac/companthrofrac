@@ -1,0 +1,53 @@
+{
+  "folders": [
+    {
+      "name": "cpθfc",
+      "path": ".."
+    }
+  ],
+
+  "settings": {
+    "npm.packageManager": "bun",
+
+    "files.associations": {
+      "manifest.json": "jsonc",
+      "*.mdto": "markdown"
+    },
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[svelte]": {
+      "editor.defaultFormatter": "svelte.svelte-vscode"
+    },
+
+    "prettier.requireConfig": true,
+    "prettier.configPath": "./.prettierrc",
+    "editor.formatOnSave": true,
+
+    // "typescript.tsdk": "./node_modules/typescript/lib",
+    "js/ts.tsdk.path": "./node_modules/typescript/lib",
+
+    "[svelte][typescript]": {
+      "js/ts.preferences.importModuleSpecifier": "non-relative",
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+      }
+    },
+
+    "css.lint.unknownAtRules": "ignore",
+    "css.lint.unknownVendorSpecificProperties": "ignore",
+    "css.lint.importStatement": "ignore",
+    "css.lint.idSelector": "ignore",
+    "css.lint.important": "ignore",
+
+    "tailwindCSS.classFunctions": [
+      "tw"
+    ],
+
+    "🐬": "❔"
+  },
+  "extensions": {
+    "recommendations": [
+      "svelte.svelte-vscode"
+    ]
+  }
+}

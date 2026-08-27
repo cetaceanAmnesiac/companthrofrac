@@ -1,0 +1,10 @@
+/* cf. arc-colors.ts */
+@theme {
+  --color-arc-red: #df0707;
+  --color-arc-blue: #0760cd;
+  --color-arc-yellow: #f8e915;
+  --color-arc-green: #09b535;
+
+  --color-arc-white: #ffffff;
+  --color-arc-black: #0f0f0f;
+}
