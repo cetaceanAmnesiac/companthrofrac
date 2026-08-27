@@ -15,7 +15,7 @@ export default defineConfig({
   manifest: {
     name: 'COMPANTHROFRAC',
     description: 'Reader companion for anthrofractal.com',
-    version: '0.0.826',
+    version: '0.0.1',
     // TODO: [prod] consider adding homepage_url and author fields
     // homepage_url: 'https://anthrofractal.com',
 
