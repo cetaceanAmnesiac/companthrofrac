@@ -23,10 +23,8 @@
       >ANTHROFRACTAL</span
     >
     {#if canUnlock}
-      <button
-        class="cc-unlock"
-        onclick={() => void ledger.unitize('credited')}
-        title="acknowledge authorship">◈</button
+      <button class="cc-unlock" onclick={() => void ledger.unitize('credited')}
+        >◈</button
       >
     {:else if credited}
       <span class="cc-ack">◈</span>
