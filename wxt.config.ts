@@ -14,11 +14,13 @@ export default defineConfig({
   autoIcons: { baseIconPath: './assets/icon.png' },
   manifest: {
     name: 'COMPANTHROFRAC',
+    short_name: 'CPΘFC',
     description: 'Reader companion for anthrofractal.com',
     version: '0.0.1',
-    // TODO: [prod] consider adding homepage_url and author fields
-    // homepage_url: 'https://anthrofractal.com',
+    homepage_url: 'https://github.com/cetaceanAmnesiac/companthrofrac',
+    // update_url: '',
 
+    host_permissions: ['https://anthrofractal.com/*'],
     permissions: [
       'storage',
       'sidePanel',
@@ -28,8 +30,8 @@ export default defineConfig({
 
     commands: {
       open_panel: {
-        // TODO: [prod] choose a final keybind; Ctrl+Shift+Y is a placeholder.
-        // NOTE: Chrome reserves many Ctrl+Shift combos — test on target platforms.
+        // TODO: choose final keybinding
+        // NOTE: Chrome/etc reserve many Ctrl+Shift combos
         // also consider making it unset by default so users bind their own?
         suggested_key: { default: 'Ctrl+Shift+Y', mac: 'Command+Shift+Y' },
         description: 'Open side panel',
@@ -41,7 +43,6 @@ export default defineConfig({
   // cf. https://wxt.dev/api/reference/wxt/interfaces/WebExtConfig.html
   webExt: {
     startUrls: ['https://anthrofractal.com/'],
-    // startUrls: ['https://anthrofractal.com/comic/25/'],
 
     // cf. .gitignore (blank .gitkeep files track skeleton)
     chromiumProfile: resolve('./.chromium/user-data'),
@@ -63,7 +64,5 @@ export default defineConfig({
       //   brotliSize: true,
       // }),
     ],
-
-    // build: {},
   }),
 });

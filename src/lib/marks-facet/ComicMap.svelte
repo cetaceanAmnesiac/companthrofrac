@@ -21,6 +21,7 @@
   const acme = $derived(getAcme(ledger));
   const metadata = $derived.by(getMetadata);
   const { indexed } = $derived(countFoliaBy(getFolia(ledger)));
+  const hasPanelSpan = $derived(ledger.isInked('panelSpan'));
   const panelSpan = $derived(ledger.produce('panelSpan') ?? PANEL_SPAN_DEFAULT);
   const panelBadgeProps = $derived(getPanelBadgeProps(ledger, metadata));
   const specialBadgeProps = $derived(getSpecialBadgeProps(ledger));
@@ -57,5 +58,5 @@
     <span class="ml-auto text-gray-600">/ {acme ?? '…?'}</span>
   </div>
 
-  {#if panelSpan !== null}<SpanDial />{/if}
+  {#if hasPanelSpan}<SpanDial />{/if}
 </div>

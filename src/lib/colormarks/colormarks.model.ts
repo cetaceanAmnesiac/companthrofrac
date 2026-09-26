@@ -118,7 +118,7 @@ const createBooleanWrit = <W extends BooleanColorword>(): Colorwrit<W> => ({
 });
 
 export const PANEL_SPAN_MIN = 1;
-export const PANEL_SPAN_DEFAULT = 6;
+export const PANEL_SPAN_DEFAULT = 4;
 export const PANEL_SPAN_MAX = 12;
 
 const COLORWRITS: Colorwrits = {
@@ -203,6 +203,7 @@ const COLORWRITS: Colorwrits = {
   panelSpan: {
     bottom: PANEL_SPAN_MIN,
     default: PANEL_SPAN_DEFAULT,
+    unit: PANEL_SPAN_DEFAULT,
     reducer: (_, incoming) => clamp(incoming, [PANEL_SPAN_MIN, PANEL_SPAN_MAX]),
   },
   innerDimensions: {
