@@ -6,6 +6,26 @@ export default defineBackground({
     browser.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
     browser.commands.onCommand.addListener(handleBrowserCommand);
     onAction(handleCompanthrofrAction);
+
+    // browser.omnibox.setDefaultSuggestion({ description: '' });
+    browser.omnibox.onInputChanged.addListener((text, suggest) => {
+      suggest([]);
+      // suggest([
+      //   {
+      //     content: `panel-${text}`,
+      //     description: `Go to panel ${text}`,
+      //   },
+      // ]);
+    });
+    browser.omnibox.onInputEntered.addListener(
+      (text, disposition) =>
+        void accessUrl(
+          /^\d+$/.test(text)
+            ? getPanelUrl(parseInt(text, 10))
+            : getTagUrl(text),
+          disposition,
+        ),
+    );
   },
 });
 
@@ -25,7 +45,7 @@ const handleCompanthrofrAction = (cpθfr: CompanthrofrAction): void => {
       return void goToTag(cpθfr.tag);
 
     case 'navigateUrl':
-      return void updateActiveTab(cpθfr.url);
+      return void accessUrl(cpθfr.url);
 
     case 'sight':
     case 'reveal':
@@ -38,18 +58,40 @@ const handleCompanthrofrAction = (cpθfr: CompanthrofrAction): void => {
   }
 };
 
-const goToIndexedPanel = (id: IndexedPanelId) =>
-  updateActiveTab(`https://anthrofractal.com/comic/${id}/`);
-
-const goToTag = (tag: string) =>
-  updateActiveTab(`https://anthrofractal.com/comic/search/tag/${tag}/`);
-
-const updateActiveTab = async (url: string) => {
-  const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
-  if (tab?.id) void browser.tabs.update(tab.id, { url });
+const relayToActiveTab = async (msg: CompanthrofrAction) => {
+  const tabId = await getActiveTabId();
+  if (tabId !== null) void browser.tabs.sendMessage(tabId, msg);
 };
 
-const relayToActiveTab = async (msg: CompanthrofrAction) => {
+const goToIndexedPanel = (id: IndexedPanelId) => accessUrl(getPanelUrl(id));
+const goToTag = (tag: string) => accessUrl(getTagUrl(tag));
+
+const getPanelUrl = (id: IndexedPanelId) =>
+  `https://anthrofractal.com/comic/${id}/`;
+const getTagUrl = (tag: string) =>
+  `https://anthrofractal.com/comic/search/tag/${tag}/`;
+
+type UrlDisposition = `${Browser.omnibox.OnInputEnteredDisposition}`;
+const accessUrl = async (
+  url: string,
+  disposition: UrlDisposition = 'currentTab',
+): Promise<void> => {
+  switch (disposition) {
+    case 'currentTab':
+      return void (await updateActiveTab(url));
+    case 'newForegroundTab':
+      return void (await browser.tabs.create({ url }));
+    case 'newBackgroundTab':
+      return void (await browser.tabs.create({ url, active: false }));
+  }
+};
+
+const updateActiveTab = async (url: string) => {
+  const tabId = await getActiveTabId();
+  if (tabId !== null) void (await browser.tabs.update(tabId, { url }));
+};
+
+const getActiveTabId = async () => {
   const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
-  if (tab?.id) void browser.tabs.sendMessage(tab.id, msg);
+  return tab?.id ?? null;
 };

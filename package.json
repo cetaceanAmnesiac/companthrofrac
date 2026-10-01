@@ -14,7 +14,7 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "postinstall": "wxt prepare",
     "build:metadata": "bun src/data/metadata/build.ts && bunx prettier --write src/data/metadata/_output.dto.json",
-    "scratch": "bun src/data/metadata/scratch.ts"
+    "🐬": "❔"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.14",
