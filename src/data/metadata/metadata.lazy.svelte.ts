@@ -2,6 +2,7 @@ import {
   type MetadatumDto,
   type PanelMetadata,
 } from '@/data/metadata/metadata.model';
+import { wrbygToHex } from '𝕮⁂𝕮/anthrofractal/arc-colors';
 import { Effrontery, stamp, timer } from '𝕮⁂𝕮/utils';
 import {
   type Asχnma,
@@ -48,3 +49,8 @@ export const getMetadatum = (index: number): MetadatumDto | null =>
   getMetadata()?.get(index) ?? null;
 
 export const countMetadata = () => getMetadata()?.size ?? null;
+
+export const getNomianiColor = (index: number): string | null => {
+  const meta = getMetadatum(index);
+  return meta?.nomianiColor ? (wrbygToHex(meta.nomianiColor[0]) ?? null) : null;
+};

@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { getMetadatum } from '@/data/metadata/metadata.lazy.svelte';
-  import { wrbygToHex } from '𝕮⁂𝕮/anthrofractal/arc-colors';
+  import { getNomianiColor } from '@/data/metadata/metadata.lazy.svelte';
   import { getPanelLabel, isIndexedPanel } from '𝕮⁂𝕮/anthrofractal/panel-id';
   import {
     getAcme,
@@ -30,13 +29,11 @@
       : 0,
   );
 
-  const thumbHex = $derived.by(() => {
-    if (!beachball || !isIndexedPanel(anchor)) return null;
-    const meta = getMetadatum(anchor);
-    return meta?.nomianiColor
-      ? (wrbygToHex(meta.nomianiColor[0]) ?? null)
-      : null;
-  });
+  const thumbHex = $derived(
+    beachball && !offsite && isIndexedPanel(anchor) && last !== null
+      ? getNomianiColor(anchor)
+      : null,
+  );
 </script>
 
 <div class="w-full px-5 pb-2 pt-1.5">
@@ -55,7 +52,7 @@
       class="fill {offsite ? 'fill-off' : 'fill-on'}"
       style:width="{progressPct}%"
     ></div>
-    {#if !offsite && isIndexedPanel(anchor) && last !== null}
+    {#if thumbHex !== null}
       <div
         class="thumb"
         style:left="{progressPct}%"

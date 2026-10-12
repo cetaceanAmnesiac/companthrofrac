@@ -22,7 +22,7 @@ type UnlockContext = {
 type UnlockCondition = (ctx: UnlockContext) => boolean;
 
 const UNLOCK_CONDITIONS: SparseColormap<UnlockCondition> = {
-  beachball: ({ foliaCounts }) => foliaCounts.indexed.seen >= 13,
+  // beachball: ({ foliaCounts }) => foliaCounts.indexed.seen >= 13,
   panelSpan: ({
     foliaCounts: {
       indexed: { seen, revealed },

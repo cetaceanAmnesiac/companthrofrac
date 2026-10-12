@@ -1,6 +1,6 @@
 import { IntCanon } from '𝕮⁂𝕮/utils';
 
-// void '≪≺⭯≻≫☉★⊘';
+void '≪≺⭯≻≫☉★⊘';
 export type NavStep = '≪' | '≺' | '⭯' | '≻' | '≫';
 export type NavKey = NavStep | '☉' | '★' | '⊘';
 export type Navigatrix = IntCanon<NavKey>;
