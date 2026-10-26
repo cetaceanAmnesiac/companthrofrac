@@ -876,7 +876,43 @@
 - 244 :: N=G :: BY -> 2-Y ::
     - 1-B :: * Examine the edges of the stone
     - 2-Y :: * Stop to rest and clear their head
-- 245 :: N=Y :: BYG -> <tbd> ::
+- 245 :: N=Y :: BYG -> 1-B ::
     - 1-B :: * Examine the edges of the stone
     - 2-Y :: * Keep trying to think through this
     - 3-G :: * Leave the area
+- 246 :: N=B :: BY -> 1-B ::
+    - 1-B :: * Remember a previous dream
+    - 2-Y :: * Come to the obvious conclusion
+- 247 :: N=B :: RBYG -> 1-R ::
+    - 1-R :: * Venture south, into the unknown
+    - 2-B :: * Travel quickly back to the Fress village
+    - 3-Y :: * Travel quickly back to the shoreline
+    - 4-G :: * Travel quickly back to the cliffs
+- 248 :: N=R :: RYG -> 1-R ::
+    - 1-R :: * Pick up black powder
+    - 2-Y :: * Go southwest
+    - 3-G :: * Go west
+- 249 :: N=R :: YG -> 1-Y ::
+    - 1-Y :: * Go southwest
+    - 2-G :: * Go west
+- 250 :: N=Y :: RBYG -> 2-B ::
+    - 1-R :: * Pick up the hollow log
+    - 2-B :: * Put the black powder in the wood container
+    - 3-Y :: * Go back the other way
+    - 4-G :: * Keep going east
+- 251 :: N=B :: RYG -> 3-G ::
+    - 1-R :: * Pick up hollow log
+    - 2-Y :: * Head quickly back the other way
+    - 3-G :: * Keep pressing east
+- 252 :: N=G :: RYG -> 1-R ::
+    - 1-R :: * Enter the cavern
+    - 2-Y :: * Go back the other way
+    - 3-G :: * Keep going east
+- 253 :: N=R :: RBG -> 1-R ::
+    - 1-R :: " I'm no thief!
+    - 2-B :: " Sorry! Um... what's your name?
+    - 3-G :: * Run away!
+- 254 :: N=R :: RBG -> <tbd> ::
+    - 1-R :: " I didn't steal any of this!
+    - 2-B :: " I didn't know this was your cave.
+    - 3-G :: " What you you mean 'sum' things?

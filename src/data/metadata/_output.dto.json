@@ -7321,7 +7321,9 @@
         "Leave the area"
       ]
     ],
-    "resolution": "<tbd>",
+    "resolution": [
+      0
+    ],
     "metadata": null,
     "tags": [
       "chapter four",
@@ -7330,5 +7332,296 @@
     ],
     "description": "Nomiani decides to try and rest.\n\nOnce they do, they again dream of the continued computer message. A little more is added, with the full sentence now saying \"QUESTION RE: CLIMATE CHANGE ACTION\n\nWHAT SHOULD WE DO TO AVOID THE WORST OUTCOMES?\"\n\nSuddenly, the dream is interrupted by the phrase COMPLETE BLUE PROTOCOL repeating over and over and over again until the scene is completely whited out. They wake up again, with their brain hurting even worse now.",
     "tumblrPostId": "825335449163874304"
+  },
+  {
+    "index": 246,
+    "date": "2026-08-25",
+    "nomianiColor": "B",
+    "choices": [
+      [
+        "B",
+        "*",
+        "Remember a previous dream"
+      ],
+      [
+        "Y",
+        "*",
+        "Come to the obvious conclusion"
+      ]
+    ],
+    "resolution": [
+      0
+    ],
+    "metadata": null,
+    "tags": [
+      "chapter four",
+      "the door in the earth",
+      "how to handle this"
+    ],
+    "description": "Examining the edges of the stone shows four handles on each end…in various states of wear.\n\nThe north end handle is the most in tact, but is pressed hard against the rock. Someone strong needs to use this.\n\nThe east end handle is worn such that only someone with thumbs could use it.\n\nThe south end handle has barely a hook of it left. Someone with claws or a beak could use it.\n\nThe west end handle is almost completely gone. Only someone with a tentacle could reach into the depression and use it.",
+    "tumblrPostId": "825969645470302208"
+  },
+  {
+    "index": 247,
+    "date": "2026-09-01",
+    "nomianiColor": "B",
+    "choices": [
+      [
+        "R",
+        "*",
+        "Venture south, into the unknown"
+      ],
+      [
+        "B",
+        "*",
+        "Travel quickly back to the Fress village"
+      ],
+      [
+        "Y",
+        "*",
+        "Travel quickly back to the shoreline"
+      ],
+      [
+        "G",
+        "*",
+        "Travel quickly back to the cliffs"
+      ]
+    ],
+    "resolution": [
+      0
+    ],
+    "metadata": null,
+    "tags": [
+      "chapter four",
+      "the door in the earth",
+      "a vision remembered"
+    ],
+    "description": "Just outside of the pit, Nomiani stops to think once again. They remember the dream they had previously, when they prayed for luck from the Speaking Dark. Again, they see a form like a Riverline appearing out of the night sky, with the moon for an eye, and swimming into the stars. Ripples of water appear, casting visions of various creatures…one of them Sowgil-Third, another of Darker-Than-Pink, one of an unknown Nibo, and one an unknown Gofi. This seems like the help they need!",
+    "tumblrPostId": "826603804799713280"
+  },
+  {
+    "index": 248,
+    "date": "2026-09-08",
+    "nomianiColor": "R",
+    "choices": [
+      [
+        "R",
+        "*",
+        "Pick up black powder"
+      ],
+      [
+        "Y",
+        "*",
+        "Go southwest"
+      ],
+      [
+        "G",
+        "*",
+        "Go west"
+      ]
+    ],
+    "resolution": [
+      0
+    ],
+    "metadata": null,
+    "tags": [
+      "chapter four",
+      "the door in the earth",
+      "into new territory"
+    ],
+    "description": "Thinking on the other people they need to find, Nomiani heads southward, into unknown territory. The pit area clears out, but the landscape is becoming even more dry and desert-like. There’s a bit of black powder clumped in a small pit nearby.",
+    "tumblrPostId": "827237984929742848"
+  },
+  {
+    "index": 249,
+    "date": "2026-09-15",
+    "nomianiColor": "R",
+    "choices": [
+      [
+        "Y",
+        "*",
+        "Go southwest"
+      ],
+      [
+        "G",
+        "*",
+        "Go west"
+      ]
+    ],
+    "resolution": [
+      0
+    ],
+    "metadata": null,
+    "tags": [
+      "chapter four",
+      "the door in the earth",
+      "growing the powder collection"
+    ],
+    "description": "Nomiani picks up the black powder, and adds it to their inventory! Without a container, though, it’ll keep spilling everywhere along the way.",
+    "tumblrPostId": "827872171480252416"
+  },
+  {
+    "index": 250,
+    "date": "2026-09-22",
+    "nomianiColor": "Y",
+    "choices": [
+      [
+        "R",
+        "*",
+        "Pick up the hollow log"
+      ],
+      [
+        "B",
+        "*",
+        "Put the black powder in the wood container"
+      ],
+      [
+        "Y",
+        "*",
+        "Go back the other way"
+      ],
+      [
+        "G",
+        "*",
+        "Keep going east"
+      ]
+    ],
+    "resolution": [
+      1
+    ],
+    "metadata": null,
+    "tags": [
+      "chapter four",
+      "the door in the earth",
+      "dry wood dry air"
+    ],
+    "description": "Nomiani decides to go southeast. More dry landscape awaits them, although there’s pieces of splintered wood around, some which could be useful. They get the feeling that they’re being watched…",
+    "tumblrPostId": "828506343372636160"
+  },
+  {
+    "index": 251,
+    "date": "2026-09-29",
+    "nomianiColor": "B",
+    "choices": [
+      [
+        "R",
+        "*",
+        "Pick up hollow log"
+      ],
+      [
+        "Y",
+        "*",
+        "Head quickly back the other way"
+      ],
+      [
+        "G",
+        "*",
+        "Keep pressing east"
+      ]
+    ],
+    "resolution": [
+      2
+    ],
+    "metadata": null,
+    "tags": [
+      "chapter four",
+      "the door in the earth",
+      "powder contained"
+    ],
+    "description": "Nomiani picks up the wood container, and puts the black powder inside. Now it won’t keep spilling everywhere! A shadow passes nearby…",
+    "tumblrPostId": "829140520945287168"
+  },
+  {
+    "index": 252,
+    "date": "2026-10-06",
+    "nomianiColor": "G",
+    "choices": [
+      [
+        "R",
+        "*",
+        "Enter the cavern"
+      ],
+      [
+        "Y",
+        "*",
+        "Go back the other way"
+      ],
+      [
+        "G",
+        "*",
+        "Keep going east"
+      ]
+    ],
+    "resolution": [
+      0
+    ],
+    "metadata": null,
+    "tags": [
+      "chapter four",
+      "the door in the earth",
+      "a door to shade"
+    ],
+    "description": "Nomiani elects to head east. The sun continues to beat down, and the river flows slowly in the distance. However, there appears to be a cavern entrance nearby that could offer shade.",
+    "tumblrPostId": "829774695041777664"
+  },
+  {
+    "index": 253,
+    "date": "2026-10-13",
+    "nomianiColor": "R",
+    "choices": [
+      [
+        "R",
+        "\"",
+        "I'm no thief!"
+      ],
+      [
+        "B",
+        "\"",
+        "Sorry! Um... what's your name?"
+      ],
+      [
+        "G",
+        "*",
+        "Run away!"
+      ]
+    ],
+    "resolution": [
+      0
+    ],
+    "metadata": null,
+    "tags": [],
+    "description": "- tumblrPostId ::\n- tags\n    - chapter four\n    - the door in the earth\n    - surprise homeowner\n\nDESCRIPTION:\nNomiani moves to crawl inside the cavern. Before they can, a lizard-like creature leaps out from behind the rocks and blocks their path. The lizard has bright red scales with gold spots, and golden eyes. They’re also wearing some kind of headdress made of teeth and Nibo feathers.\n\nThe gofi screams, “CAUGHT YOU, nasty nasty wet THIEF!!”",
+    "tumblrPostId": null
+  },
+  {
+    "index": 254,
+    "date": "2026-10-20",
+    "nomianiColor": "R",
+    "choices": [
+      [
+        "R",
+        "\"",
+        "I didn't steal any of this!"
+      ],
+      [
+        "B",
+        "\"",
+        "I didn't know this was your cave."
+      ],
+      [
+        "G",
+        "\"",
+        "What you you mean 'sum' things?"
+      ]
+    ],
+    "resolution": "<tbd>",
+    "metadata": null,
+    "tags": [
+      "chapter four",
+      "the door in the earth",
+      "if it smells like a thief..."
+    ],
+    "description": "Nomiani protests: “I’m no thief!”\n\nThe gofi just glares back at them, not believing their protest. “No? You’re carrying sum things, you go to sneak into my den…smells like a THIEF!” they hiss back.",
+    "tumblrPostId": "831043060316143616"
   }
 ]

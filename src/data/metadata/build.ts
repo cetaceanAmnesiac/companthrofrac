@@ -6,7 +6,7 @@ import { parse as parseChoices } from './parse-choices';
 import { parse as parseMetadata } from './parse-fields';
 
 const IN_CHOICES = './panel-choices.mdto';
-const IN_FIELDS = './metadata-fields.md';
+const IN_FIELDS = './metadata-fields.mdto';
 const OUTPUT = './_output.dto.json';
 
 const main = () => {
