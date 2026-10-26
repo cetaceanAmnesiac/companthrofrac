@@ -7,8 +7,9 @@
   import StampLog from '𝕮⁂𝕮/utils/StampLog.svelte';
 
   const ledger = useColormarkLedger();
+  const hasReadout = $derived(typeof ledger.getState('readout') === 'boolean');
   const readout = $derived(ledger.produceBit('readout'));
-  const toggleReadout = (): void => void ledger.toggle('readout');
+  const toggleReadout = () => void ledger.toggle('readout') as void;
 </script>
 
 <div class="border-b border-gray-300 px-4 py-3 w-full space-y-3">
@@ -25,16 +26,18 @@
     <UiModeWidget />
   </div>
 
-  <div
-    class="cfg-row cursor-pointer"
-    role="button"
-    tabindex="0"
-    onclick={toggleReadout}
-    onkeydown={e => ['Enter', ' '].includes(e.key) && toggleReadout()}
-  >
-    <span class="cfg-label">Show readout</span>
-    <Toggle on={readout} aria-label="Toggle readout" />
-  </div>
+  {#if hasReadout}
+    <div
+      class="cfg-row cursor-pointer"
+      role="button"
+      tabindex="0"
+      onclick={toggleReadout}
+      onkeydown={e => ['Enter', ' '].includes(e.key) && toggleReadout()}
+    >
+      <span class="cfg-label">Show readout</span>
+      <Toggle on={readout} aria-label="Toggle readout" />
+    </div>
+  {/if}
 </div>
 
 <ColorstackPanel />

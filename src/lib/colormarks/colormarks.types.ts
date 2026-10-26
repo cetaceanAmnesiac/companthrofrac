@@ -5,12 +5,12 @@ import {
 
 // mostly to get things straight in my head
 
-/** colorwords of shape subtyping Shape (covariant; order-preserving) */
+/** colorwords of shape subtyping Shape (covariant) */
 export type CovariantColorword<Shape> = {
   [W in Colorword]: Colorshapes[W] extends Shape ? W : never;
 }[Colorword];
 
-/** colorwords of shape supertyping Shape (contravariant; order-reversing) */
+/** colorwords of shape supertyping Shape (contravariant) */
 export type ContravariantColorword<Shape> = {
   [W in Colorword]: [Shape] extends [Colorshapes[W]] ? W : never;
 }[Colorword];

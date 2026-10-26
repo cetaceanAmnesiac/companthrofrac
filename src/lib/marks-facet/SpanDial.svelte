@@ -1,13 +1,12 @@
 <script lang="ts">
-  import {
-    PANEL_SPAN_MAX,
-    PANEL_SPAN_MIN,
-  } from '𝕮⁂𝕮/colormarks/colormarks.model';
+  import { PANEL_SPAN_BOUNDS } from '𝕮⁂𝕮/colormarks/colormarks.model';
   import { updateLedger } from '𝕮⁂𝕮/colormarks/colormarks.storage';
   import { useColormarkLedger } from '𝕮⁂𝕮/colormarks/useColormarkLedger.svelte';
 
   const ledger = useColormarkLedger();
-  const span = $derived(ledger.produce('panelSpan') ?? 12);
+  const span = $derived(ledger.produce('panelSpan') ?? PANEL_SPAN_BOUNDS[0]);
+
+  const [min, max] = PANEL_SPAN_BOUNDS;
 
   const oninput = (e: Event) => {
     const value = Number((e.target as HTMLInputElement).value);
@@ -17,13 +16,7 @@
 
 <div class="dial">
   <span class="lbl">stride</span>
-  <input
-    type="range"
-    min={PANEL_SPAN_MIN}
-    max={PANEL_SPAN_MAX}
-    value={span}
-    {oninput}
-  />
+  <input type="range" value={span} {min} {max} {oninput} />
   <span class="val">{span}</span>
 </div>
 

@@ -38,8 +38,11 @@ const UNLOCK_CONDITIONS: SparseColormap<UnlockCondition> = {
       indexed: { seen },
     },
   }) => seen >= 62,
-  showMarginalia: ({ ledger }) =>
-    Object.values(getExpandiosity(ledger)).filter(Boolean).length >= 5,
+  showMarginalia: ({ ledger }) => {
+    const shown = ledger.shownMarks();
+    const expanded = getExpandiosity(ledger);
+    return shown.length >= 3 && shown.every(w => expanded[w]);
+  },
   riverline: ({ navKeys }) => NAV_STEPS.every(k => navKeys.has(k)),
   // something: ({ navKeys }) => NAV_STEPS.every(k => k === '⭯' || navKeys.has(k)),
   // eyes: ({

@@ -1,6 +1,11 @@
 import { type Colorword } from '𝕮⁂𝕮/colormarks/colormarks.model';
-import { getNavKeys, type Legible } from '𝕮⁂𝕮/colormarks/colormarks.selectors';
+import {
+  getFolia,
+  getNavKeys,
+  type Legible,
+} from '𝕮⁂𝕮/colormarks/colormarks.selectors';
 import { NAV_KEYS, NAV_STEPS, type NavKey } from '𝕮⁂𝕮/nav/navigatrix';
+import { countFoliaBy } from '𝕮⁂𝕮/reader-facet/folia';
 
 const BASE_MARGINALIA: Partial<Record<Colorword, string | string[]>> = {
   companthrofacet: 'which side of cpθfrc is facing you.',
@@ -9,7 +14,7 @@ const BASE_MARGINALIA: Partial<Record<Colorword, string | string[]>> = {
   navigatrix: 'it tallies your navigation actions for some reason.',
   extremal: 'whether to fullscreenify the panel.',
   extreme: [
-    'in what sense the panel is fullscreenified.',
+    'in what sense the panel is or would be fullscreenified.',
     "- MIN: fullscreenify along your device's smaller dimension for exact fit.",
     "- MAX: fullscreenify along your device's larger dimension for 1D scroll.",
     '- PIX: set the panel to its exact pixel dimensions, which may entail 2D scroll.',
@@ -23,13 +28,10 @@ const BASE_MARGINALIA: Partial<Record<Colorword, string | string[]>> = {
     '- custom: displayed rows are determined by the pall colormark.',
   ],
   pall: 'which rows of the website are shown when uiMode is set to custom.',
-  credited: 'hide the credits section for more real estate.',
-  counted: 'TBD', // TODO: remove
-  eyes: 'internal colormarks have been rendered visible.',
-  nosedemons: 'uh-oh, you have nosedemons. better close this one.',
+  credited: 'whether to hide the credits section for more real estate.',
+  eyes: 'whether internal colormarks are rendered visible.',
+  nosedemons: 'uh-oh',
   version: 'the version of the colormark system.',
-  forceDiegesis: 'suppress static panel metadata.',
-  beachball: "show a panel's arc colors on the map.",
   riverline: 'click a revealed panel on the map to go there.',
   panelSpan: 'how many panels per row on the anthrofolia map.',
   acme: 'the most recent ANTHROFRACTAL panel.',
@@ -46,20 +48,22 @@ const BASE_MARGINALIA: Partial<Record<Colorword, string | string[]>> = {
     "if you're still confused about this colorblank nonsense —",
     "it's a morphological construction we use when there is one-per-colormark of something.",
     // 'for example, every colormark has a colorwrit that defines its structural properties.',
-    // "so you could even say this colormark determines whether to show each corresponding colormarginalia, though that's a bit much.",
+    // "so you could even say this colormark determines whether to show each mark's colormarginalia, though that's a bit much.",
   ],
 
+  // forceDiegesis: 'suppress static panel metadata.',
+  // beachball: "show a panel's arc colors on the map.",
   // omnifolia: 'Expands the map to show all known panels, including unvisited.',
-  // forceDiegesis: 'Hides arc color data; map shows only visited panels.',
   // panoptic: 'Reveals all colormarks, including internal system state.',
-  // chosenResonance: 'Accumulated resonance from revealed panels.',
+  // chroma: 'Accumulated resonance from revealed panels.',
 };
 
 export const getDynamicMarginalia = (word: Colorword, ledger: Legible) => {
   switch (word) {
-    case 'navigatrix': {
-      return getNavigatrixMarginalia(getNavKeys(ledger));
-    }
+    case 'navigatrix':
+      return getNavigatrixMarginalia(ledger);
+    case 'anthrofolia':
+      return getAnthrofoliaMarginalia(ledger);
     default:
       return [];
   }
@@ -74,7 +78,8 @@ const NAV_KEY_HINTS: readonly [NavKey, string][] = [
   ['⊘', '- your navigatrix will even count its failures.'],
 ];
 
-export const getNavigatrixMarginalia = (keys: Set<NavKey>) => {
+const getNavigatrixMarginalia = (ledger: Legible) => {
+  const keys = getNavKeys(ledger);
   if (NAV_STEPS.some(k => k !== '⭯' && !keys.has(k)))
     return ['you have at least 4 navigation actions: ≪ ≺ ≻ ≫'];
   if (!keys.has('⭯'))
@@ -83,12 +88,20 @@ export const getNavigatrixMarginalia = (keys: Set<NavKey>) => {
       "however, you can't return to somewhere you already are...",
     ];
   if (!NAV_KEYS.every(k => keys.has(k)))
-    // cannot unwrap .has
     return NAV_KEY_HINTS.reduce<string[]>(
       (acc, [k, hint]) => (!keys.has(k) && acc.push(hint), acc),
       [`there are ${NAV_KEYS.length - keys.size} keys unfound.`],
     );
   return ['all nav keys have been found!'];
+};
+
+const getAnthrofoliaMarginalia = (ledger: Legible) => {
+  const { seen, revealed } = countFoliaBy(getFolia(ledger)).indexed;
+  if (seen > revealed)
+    return [`${seen - revealed} panels seen but not revealed.`];
+  if (seen > 0 && !ledger.produce('eyes'))
+    return ["every panel you've seen, you've revealed."];
+  return [];
 };
 
 export const getMarginalia = (word: Colorword, ledger: Legible) => {

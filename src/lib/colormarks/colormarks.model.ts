@@ -17,7 +17,7 @@ import {
 } from '𝕮⁂𝕮/reader-facet/folia';
 import { DEFAULT_UI_MODE, type UiMode } from '𝕮⁂𝕮/ui-mode';
 import {
-  calligraph,
+  Bounds,
   Canon,
   clamp,
   IntCanon,
@@ -37,7 +37,6 @@ export type Colorshapes = {
   uiMode: UiMode;
   pall: WebrowPall;
   credited: boolean;
-  counted: number;
   eyes: true;
   nosedemons: string[];
   version: 1;
@@ -50,7 +49,7 @@ export type Colorshapes = {
   innerDimensions: Dimensions;
   panoptic: boolean;
   acme: IndexedPanelId;
-  // arcChroma: IntCanon<RBYG>;
+  // chroma: IntCanon<RBYG>;
   expandiosity: SparseColormap<boolean>;
   sightings: ColorwordSet;
   harrowingWindow: number; // ms
@@ -86,8 +85,8 @@ export type Colorwrit<Word extends Colorword> = {
 
   isApparent?: BitSelector<Word>;
   isBottom?: BitSelector<Word>;
+  normalize?: (value: Colorshapes[Word]) => Colorshapes[Word];
   reducer?: Colorreducer<Word>;
-
   gloss?: (value: Colorshapes[Word]) => string;
 };
 
@@ -117,9 +116,8 @@ const createBooleanWrit = <W extends BooleanColorword>(): Colorwrit<W> => ({
   unit: true,
 });
 
-export const PANEL_SPAN_MIN = 1;
 export const PANEL_SPAN_DEFAULT = 4;
-export const PANEL_SPAN_MAX = 12;
+export const PANEL_SPAN_BOUNDS: Bounds = [1, 12];
 
 const COLORWRITS: Colorwrits = {
   anchor: {
@@ -156,7 +154,10 @@ const COLORWRITS: Colorwrits = {
     isApparent: NEEDS_EYES,
     bottom: DEFAULT_EXTREME,
   },
-  readout: createBooleanWrit(),
+  readout: {
+    ...createBooleanWrit(),
+    unit: false,
+  },
   uiMode: {
     isApparent: NEEDS_EYES,
     default: DEFAULT_UI_MODE,
@@ -172,10 +173,6 @@ const COLORWRITS: Colorwrits = {
     default: true,
     unit: true,
   },
-  counted: {
-    bottom: 0,
-    unit: 1,
-  },
   eyes: {
     unit: true as true,
     gloss: _ => '👀',
@@ -189,7 +186,7 @@ const COLORWRITS: Colorwrits = {
   version: {
     isApparent: false,
     bottom: 1,
-    reducer: () => 1,
+    normalize: () => 1,
   },
   maxInfocaccia: {
     bottom: 0,
@@ -201,10 +198,10 @@ const COLORWRITS: Colorwrits = {
   beachball: createBooleanWrit(),
   riverline: createBooleanWrit(),
   panelSpan: {
-    bottom: PANEL_SPAN_MIN,
+    bottom: PANEL_SPAN_BOUNDS[0],
     default: PANEL_SPAN_DEFAULT,
     unit: PANEL_SPAN_DEFAULT,
-    reducer: (_, incoming) => clamp(incoming, [PANEL_SPAN_MIN, PANEL_SPAN_MAX]),
+    normalize: v => clamp(v, PANEL_SPAN_BOUNDS),
   },
   innerDimensions: {
     // isApparent: false,
@@ -212,7 +209,7 @@ const COLORWRITS: Colorwrits = {
   },
   panoptic: createBooleanWrit(),
   acme: { gloss: v => `▲${v}` },
-  // arcChroma: {
+  // chroma: {
   //   bottom: Canon.empty(),
   //   isBottom: justCheck(v => IntCanon.isEmpty(v)),
   //   isApparent: NEEDS_EYES,
@@ -225,14 +222,11 @@ const COLORWRITS: Colorwrits = {
     isBottom: justCheck(v => !Object.values(v).some(Boolean)),
     default: { anthrofolia: true },
     isApparent: justCheck(v => Object.keys(v).length >= 5),
-    reducer: (current, incoming) => {
-      const r = (Object.entries(incoming) as [Colorword, boolean][]).reduce(
+    reducer: (current, incoming) =>
+      (Object.entries(incoming) as [Colorword, boolean][]).reduce(
         (acc, [w, e]) => (e ? (acc[w] = true) : delete acc[w], acc),
         { ...current },
-      );
-      calligraph({ prev: current, next: r });
-      return r;
-    },
+      ),
     gloss: v => {
       const c = Object.keys(v).length;
       return c === 0 ? '∅' : `+${c}`;
@@ -242,7 +236,6 @@ const COLORWRITS: Colorwrits = {
   sightings: {
     bottom: {},
     isBottom: justCheck(v => Object.keys(v).length === 0),
-    // default: {},
     isApparent: () => true,
     reducer: (current, incoming) => ({ ...(current ?? {}), ...incoming }),
     gloss: v => `${Object.keys(v).length} colormarks`,
@@ -253,14 +246,14 @@ const COLORWRITS: Colorwrits = {
     default: 0,
     unit: 1000,
     isApparent: false,
-    reducer: (_, incoming) => clamp(incoming, [0]),
+    normalize: v => clamp(v, [0]),
     gloss: v => `${v} ms`,
   },
 
   haversack: {
     bottom: {},
     isBottom: justCheck(v => Object.keys(v).length === 0),
-    isApparent: v => Object.keys(v).length > 0,
+    isApparent: justCheck(v => Object.keys(v).length > 0),
     reducer: (current, incoming) => ({ ...(current ?? {}), ...incoming }),
     gloss: v => `${Object.keys(v).length} ⚐`,
   },
@@ -338,7 +331,6 @@ export class ColormarkLedger {
     return (
       value === null ||
       value === this.getBottom(word) ||
-      // (isBottom?.(this.stack, word, value) ?? false)
       (typeof isBottom === 'function'
         ? isBottom(this.stack, word, value)
         : (isBottom ?? false))
@@ -367,8 +359,12 @@ export class ColormarkLedger {
     word: Word,
     providedValue: Colorshapes[Word] | null,
   ) => {
+    const { normalize } = ColormarkLedger.WRITS[word];
     const value = providedValue === null ? this.getBottom(word) : providedValue;
-    return new ColormarkLedger({ ...this.stack, [word]: value });
+    return new ColormarkLedger({
+      ...this.stack,
+      [word]: value !== null && normalize ? normalize(value) : value,
+    });
   };
 
   lock = (word: Colorword) => this.mark(word, null);
