@@ -69,7 +69,7 @@ export const getDynamicMarginalia = (word: Colorword, ledger: Legible) => {
   }
 };
 
-const NAV_KEY_HINTS: readonly [NavKey, string][] = [
+const NAV_KEY_HINTS: readonly (readonly [NavKey, string])[] = [
   ['☉', '- have you followed the riverline?'],
   [
     '★',

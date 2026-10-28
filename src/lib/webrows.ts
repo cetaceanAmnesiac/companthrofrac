@@ -17,4 +17,4 @@ export const WEBROWS = [
   Webrow.PANEL,
   Webrow.CONTROLS,
   Webrow.COUNTDOWN,
-];
+] as const;

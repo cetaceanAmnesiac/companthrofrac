@@ -6,7 +6,7 @@ export const timer = () => {
 export const delay = (ms: number) =>
   new Promise<void>(resolve => setTimeout(resolve, ms));
 
-export type Stamp = [t: number, eff: Effrontery, msg: string];
+export type Stamp = readonly [t: number, eff: Effrontery, msg: string];
 const stamps: Stamp[] = [];
 
 export type Effrontery = keyof Console & ('debug' | 'info' | 'warn' | 'error');

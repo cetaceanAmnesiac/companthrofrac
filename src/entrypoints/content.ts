@@ -12,20 +12,15 @@ import {
 } from '𝕮⁂𝕮/anthrofractal/dom';
 import '𝕮⁂𝕮/anthrofractal/maximize-panel.css';
 import { ColormarkLedger } from '𝕮⁂𝕮/colormarks/colormarks.model';
-import {
-  getEffectivePall,
-  getFacet,
-} from '𝕮⁂𝕮/colormarks/colormarks.selectors';
+import { getEffectivePall } from '𝕮⁂𝕮/colormarks/colormarks.selectors';
 import {
   freezeLedger,
   getLedger,
   marksStorage,
   nosedemon,
   resolveLedger,
-  updateLedger,
   warmLedger,
 } from '𝕮⁂𝕮/colormarks/colormarks.storage';
-import { DEFAULT_COMPANTHROFACET } from '𝕮⁂𝕮/colormarks/companthrofacet';
 import { type Extreme } from '𝕮⁂𝕮/colormarks/extreme';
 import { type WebrowPall } from '𝕮⁂𝕮/colormarks/webrow-pall';
 import Readout from '𝕮⁂𝕮/frame/Readout.svelte';
@@ -37,7 +32,7 @@ import { Webrow, WEBROWS } from '𝕮⁂𝕮/webrows';
 
 export default defineContentScript({
   matches: ['*://anthrofractal.com/*', '*://*.anthrofractal.com/*'],
-  runAt: 'document_end',
+  runAt: 'document_end', // TODO: ?
   main: async () => {
     const disconnectPrinter = connectPrinter(([_tp, eff, msg]) =>
       sendAction({ action: 'stamp', eff, msg }),
@@ -57,18 +52,18 @@ export default defineContentScript({
     const handleKeydown = createKeyHandler({
       onSight,
       onReveal,
-      setFacet: facet =>
-        void updateLedger(
-          l => l.mark('companthrofacet', facet),
-          nosedemon('KEYBOUND'),
-        ),
-      getFacet: () => {
-        const l = getLedger();
-        return l ? getFacet(l) : DEFAULT_COMPANTHROFACET;
-      },
-      setUiMode: mode =>
-        void updateLedger(l => l.mark('uiMode', mode), nosedemon('KEYBOUND')),
       toast: msg => sendAction({ action: 'toast', msg }),
+      // setFacet: facet =>
+      //   void updateLedger(
+      //     l => l.mark('companthrofacet', facet),
+      //     nosedemon('KEYBOUND'),
+      //   ),
+      // getFacet: () => {
+      //   const l = getLedger();
+      //   return l ? getFacet(l) : DEFAULT_COMPANTHROFACET;
+      // },
+      // setUiMode: mode =>
+      //   void updateLedger(l => l.mark('uiMode', mode), nosedemon('KEYBOUND')),
     });
 
     document.addEventListener('keydown', handleKeydown, { capture: true });

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getMetadata } from '@/data/metadata/metadata.lazy.svelte';
+  import { getMetadata } from '@/data/metadata/metadata.svelte';
   import { SPECIAL_PANEL_IDS } from '𝕮⁂𝕮/anthrofractal/panel-id';
   import { type BodyProps } from '𝕮⁂𝕮/colormarks/body-registry';
   import { PANEL_SPAN_DEFAULT } from '𝕮⁂𝕮/colormarks/colormarks.model';

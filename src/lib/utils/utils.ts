@@ -62,14 +62,28 @@ export type LineProps = {
 export type Dimensions = { [A in 'width' | 'height']: number };
 export type Axis = keyof Dimensions;
 
-export type Bounds = [b0: number, b1: number];
+export type Bounds = readonly [b0: number, b1: number];
 export const clamp = (
   v: number,
   [min = -Infinity, max = +Infinity]: Partial<Bounds>,
 ) => Math.min(Math.max(v, min), max);
 
 const _typeof = (value: any) => typeof value;
-type JsType = ReturnType<typeof _typeof>;
+export type JsType = ReturnType<typeof _typeof>;
 
-// no-op for IntelliSense -- c.f. tailwindCSS.classFunctions
+// prevent widening in union types with string literals
+export type AnyOtherString = string & {};
+
+// no-op for IntelliSense -- cf. tailwindCSS.classFunctions
 export const tw = (...classNames: string[]) => classNames.join(' ');
+
+type BaseMatch = { [Key in keyof any]?: string };
+export const createMatcher =
+  <Match extends BaseMatch>(regex: RegExp) =>
+  (value: string) =>
+    (value.match(regex)?.groups as Match | undefined) ?? null;
+
+export const modularIndex = <T>(items: readonly T[], i: number) => {
+  const count = items.length;
+  return items[((i % count) + count) % count];
+};

@@ -1,5 +1,5 @@
-export type RangePart = number | [number, number];
-export type DisjointRange = RangePart[];
+export type RangePart = number | readonly [number, number];
+export type DisjointRange = readonly RangePart[];
 
 export const toDisjointRange = (ns: number[]): DisjointRange =>
   [...new Set(ns)]

@@ -3,7 +3,7 @@ import { type Effrontery } from '𝕮⁂𝕮/utils/time';
 
 export type CompanthrofrActionType = CompanthrofrAction['action'];
 export type CompanthrofrAction =
-  | { action: 'navigate'; panel: IndexedPanelId }
+  | { action: 'navigatePanel'; panel: IndexedPanelId }
   | { action: 'navigateUrl'; url: string }
   | { action: 'navigateTag'; tag: string }
   | { action: 'sight' }

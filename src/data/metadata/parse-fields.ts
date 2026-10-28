@@ -1,4 +1,4 @@
-import { MetadatumDto } from '@/data/metadata/metadata.model';
+import { type MetadatumDto } from '@/data/metadata/metadata.model';
 
 type MetadataFields = Pick<
   MetadatumDto,

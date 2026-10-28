@@ -3,8 +3,8 @@ import { resolve } from 'path';
 import { defineConfig } from 'wxt';
 
 const VERSION = '0.0.1';
-const USE_VISUALIZER = false;
 const OMNIBOX_KEYWORD = 'af';
+const USE_VISUALIZER = false;
 
 // cf. https://wxt.dev/api/config.html
 export default defineConfig({
@@ -17,11 +17,7 @@ export default defineConfig({
 
   // cf. https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json
   manifestVersion: 3,
-  manifest: ({
-    browser,
-    // manifestVersion,
-    // mode
-  }) => ({
+  manifest: ({ browser }) => ({
     name: 'COMPANTHROFRAC',
     short_name: 'CPΘFC',
     description: 'Reader companion for anthrofractal.com',
@@ -74,7 +70,7 @@ export default defineConfig({
   // only applies to dev
   // cf. https://wxt.dev/api/reference/wxt/interfaces/WebExtConfig.html
   webExt: {
-    startUrls: ['https://anthrofractal.com/'],
+    // startUrls: ['https://anthrofractal.com/'], // TODO: ?
 
     chromiumProfile: resolve('./.chromium/user-data'),
     keepProfileChanges: true,

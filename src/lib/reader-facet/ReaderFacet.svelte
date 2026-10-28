@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getMetadatum } from '@/data/metadata/metadata.lazy.svelte';
+  import { getMetadatum } from '@/data/metadata/metadata.svelte';
   import { isIndexedPanel, isSpecialPanel } from '𝕮⁂𝕮/anthrofractal/panel-id';
   import { getAnchor, getFolium } from '𝕮⁂𝕮/colormarks/colormarks.selectors';
   import { useColormarkLedger } from '𝕮⁂𝕮/colormarks/useColormarkLedger.svelte';

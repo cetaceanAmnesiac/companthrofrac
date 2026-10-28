@@ -7,13 +7,7 @@ import {
   type TagResolution,
   type WRBYG,
 } from '𝕮⁂𝕮/anthrofractal/choices';
-
-type BaseMatch = { [Key in keyof any]?: string };
-
-const createMatcher =
-  <Match extends BaseMatch>(regex: RegExp) =>
-  (value: string) =>
-    (value.match(regex)?.groups as Match | undefined) ?? null;
+import { createMatcher } from '𝕮⁂𝕮/utils';
 
 type ParsedLine = ParsedPanelLine | ParsedChoiceLine;
 

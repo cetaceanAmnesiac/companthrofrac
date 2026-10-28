@@ -1,36 +1,47 @@
 import { onAction, type CompanthrofrAction } from '𝕮⁂𝕮/actions';
 import { type IndexedPanelId } from '𝕮⁂𝕮/anthrofractal/panel-id';
+import { type AnyOtherString } from '𝕮⁂𝕮/utils';
 
 export default defineBackground({
   main: () => {
     browser.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
-    browser.commands.onCommand.addListener(handleBrowserCommand);
+    browser.commands.onCommand.addListener(handleExtensionCommand);
     onAction(handleCompanthrofrAction);
 
     // browser.omnibox.setDefaultSuggestion({ description: '' });
     browser.omnibox.onInputChanged.addListener((text, suggest) => {
-      suggest([]);
-      // suggest([
-      //   {
-      //     content: `panel-${text}`,
-      //     description: `Go to panel ${text}`,
-      //   },
-      // ]);
+      suggest([
+        ...(/^\d+$/.test(text) ? [createPanelSuggestion(text)] : []),
+        createTagSuggestion(text),
+      ]);
     });
     browser.omnibox.onInputEntered.addListener(
       (text, disposition) =>
         void accessUrl(
-          /^\d+$/.test(text)
-            ? getPanelUrl(parseInt(text, 10))
-            : getTagUrl(text),
+          /^(?:panel-)?\d+$/.test(text)
+            ? getPanelUrl(parseInt(text.replace(/^panel-/, ''), 10))
+            : getTagUrl(encodeURIComponent(text.replace(/^tag-/, ''))),
           disposition,
         ),
     );
   },
 });
 
-const handleBrowserCommand = (command: string) => {
-  if (command === 'open_panel') void openPanel();
+const createPanelSuggestion = (
+  text: string,
+): Browser.omnibox.SuggestResult => ({
+  content: `panel-${text}`,
+  description: `Go to <url>panel <match>${text}</match></url>`,
+});
+
+const createTagSuggestion = (text: string): Browser.omnibox.SuggestResult => ({
+  content: `tag-${text}`,
+  description: `Search for <url>tag <match>${text}</match></url>`,
+});
+
+export type ExtensionCommand = 'open_panel' | AnyOtherString;
+const handleExtensionCommand = (command: ExtensionCommand): void => {
+  if (command === 'open_panel') return void openPanel();
 };
 
 const openPanel = async () =>
@@ -38,7 +49,7 @@ const openPanel = async () =>
 
 const handleCompanthrofrAction = (cpθfr: CompanthrofrAction): void => {
   switch (cpθfr.action) {
-    case 'navigate':
+    case 'navigatePanel':
       return void goToIndexedPanel(cpθfr.panel);
 
     case 'navigateTag':

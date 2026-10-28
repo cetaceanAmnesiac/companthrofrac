@@ -23,6 +23,11 @@
     "prettier.configPath": "./.prettierrc",
     "editor.formatOnSave": true,
 
+    "editor.unicodeHighlight.allowedCharacters": {
+      "ℳ": true,
+      "ʼ": true
+    },
+
     // "typescript.tsdk": "./node_modules/typescript/lib",
     "js/ts.tsdk.path": "./node_modules/typescript/lib",
 

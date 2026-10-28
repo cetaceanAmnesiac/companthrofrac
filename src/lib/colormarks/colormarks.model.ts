@@ -6,7 +6,7 @@ import {
 } from '𝕮⁂𝕮/colormarks/companthrofacet';
 import { DEFAULT_EXTREME, type Extreme } from '𝕮⁂𝕮/colormarks/extreme';
 import { EMPTY_PALL, type WebrowPall } from '𝕮⁂𝕮/colormarks/webrow-pall';
-import { type Haversack } from '𝕮⁂𝕮/haversack';
+import { createBottomKeybinder, type Keybinder } from '𝕮⁂𝕮/keys/keybinder';
 import { type Navigatrix } from '𝕮⁂𝕮/nav/navigatrix';
 import {
   countIndexedFolia,
@@ -17,11 +17,11 @@ import {
 } from '𝕮⁂𝕮/reader-facet/folia';
 import { DEFAULT_UI_MODE, type UiMode } from '𝕮⁂𝕮/ui-mode';
 import {
-  Bounds,
   Canon,
   clamp,
   IntCanon,
   stringify,
+  type Bounds,
   type Dimensions,
 } from '𝕮⁂𝕮/utils';
 
@@ -53,10 +53,11 @@ export type Colorshapes = {
   expandiosity: SparseColormap<boolean>;
   sightings: ColorwordSet;
   harrowingWindow: number; // ms
-  haversack: Haversack;
+  // haversack: Haversack;
   showMarginalia: boolean;
   // everlocked: null;
   // occulted: undefined;
+  keybinder: Keybinder;
 };
 
 export type Colorreducer<Word extends Colorword> = (
@@ -250,12 +251,17 @@ const COLORWRITS: Colorwrits = {
     gloss: v => `${v} ms`,
   },
 
-  haversack: {
-    bottom: {},
-    isBottom: justCheck(v => Object.keys(v).length === 0),
-    isApparent: justCheck(v => Object.keys(v).length > 0),
-    reducer: (current, incoming) => ({ ...(current ?? {}), ...incoming }),
-    gloss: v => `${Object.keys(v).length} ⚐`,
+  // haversack: {
+  //   bottom: {},
+  //   isBottom: justCheck(v => Object.keys(v).length === 0),
+  //   isApparent: justCheck(v => Object.keys(v).length > 0),
+  //   reducer: (current, incoming) => ({ ...(current ?? {}), ...incoming }),
+  //   gloss: v => `${Object.keys(v).length} ⚐`,
+  // },
+
+  keybinder: {
+    bottom: createBottomKeybinder(),
+    // TODO: ...
   },
   showMarginalia: createBooleanWrit(),
 };

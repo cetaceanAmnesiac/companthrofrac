@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getNomianiColor } from '@/data/metadata/metadata.lazy.svelte';
+  import { getNomianiColor } from '@/data/metadata/metadata.svelte';
   import { getPanelLabel, isIndexedPanel } from '𝕮⁂𝕮/anthrofractal/panel-id';
   import {
     getAcme,

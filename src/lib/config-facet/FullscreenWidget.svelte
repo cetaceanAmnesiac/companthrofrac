@@ -26,7 +26,7 @@
     on={extremal}
     class="rounded-tl-none rounded-bl-none rounded-br-none"
   >
-    {#each EXTREME_HANDLES as { extreme: ex, desc } (ex)}
+    {#each EXTREME_HANDLES as [ex, desc] (ex)}
       {@const active = ex === extreme}
       <button
         type="button"

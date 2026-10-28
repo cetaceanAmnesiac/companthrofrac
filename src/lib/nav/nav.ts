@@ -65,7 +65,7 @@ const SPECIAL_PANEL_URL = {
 } as const;
 
 const _navigateId = (panel: number) =>
-  sendAction({ action: 'navigate', panel });
+  sendAction({ action: 'navigatePanel', panel });
 const _navigateTag = (tag: string) =>
   sendAction({ action: 'navigateTag', tag });
 const _navigateUrl = (url: string) =>

@@ -54,10 +54,10 @@
   const handleKeydown = createKeyHandler({
     onSight: () => sendAction({ action: 'sight' }),
     onReveal: () => sendAction({ action: 'reveal' }),
-    setFacet: facet => void ledger.mark('companthrofacet', facet),
-    getFacet: () => facet,
-    setUiMode: mode => void ledger.mark('uiMode', mode),
     toast,
+    // setFacet: facet => void ledger.mark('companthrofacet', facet),
+    // getFacet: () => facet,
+    // setUiMode: mode => void ledger.mark('uiMode', mode),
   });
 
   $effect(() =>

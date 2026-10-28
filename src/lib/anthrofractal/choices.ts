@@ -1,4 +1,8 @@
-export type Choice = [color: WRBYG, action: ActionCode, pragma: string];
+export type Choice = readonly [
+  color: WRBYG,
+  action: ActionCode,
+  pragma: string,
+];
 
 void 'RBYG';
 void 'WRBYG';

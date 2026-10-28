@@ -3,7 +3,7 @@ import {
   type PanelMetadata,
 } from '@/data/metadata/metadata.model';
 import { wrbygToHex } from '𝕮⁂𝕮/anthrofractal/arc-colors';
-import { Effrontery, stamp, timer } from '𝕮⁂𝕮/utils';
+import { type Effrontery, stamp, timer } from '𝕮⁂𝕮/utils';
 import {
   type Asχnma,
   createIdleAsχnma,
